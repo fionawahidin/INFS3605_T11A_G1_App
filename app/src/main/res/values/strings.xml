@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">INFS3605_T11A_G1_App</string>
+    <string name="welcome_message">Welcome to Impactio3605!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="no_account">Don\u0027t have an account? <b>Sign Up</b></string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.INFS3605_T11A_G1_App">
         <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity

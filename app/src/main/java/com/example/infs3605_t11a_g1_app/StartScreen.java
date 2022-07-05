@@ -62,7 +62,7 @@ public class StartScreen extends AppCompatActivity {
 
     public void launchMainActivity() {
         Log.d(TAG, "Launching MainActivity");
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }
 
