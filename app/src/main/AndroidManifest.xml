@@ -11,6 +11,9 @@
         android:theme="@style/Theme.INFS3605_T11A_G1_App">
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StartScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
