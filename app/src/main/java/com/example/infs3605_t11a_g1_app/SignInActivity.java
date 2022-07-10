@@ -25,6 +25,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        getSupportActionBar().hide();
 
         MaterialButton btnSignIn = findViewById(R.id.signIn_btnSignIn);
         TextView tvSignUp = findViewById(R.id.signIn_tvSignUp);

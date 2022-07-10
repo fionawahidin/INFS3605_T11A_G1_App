@@ -28,6 +28,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        getSupportActionBar().hide();
 
         title = findViewById(R.id.app_title);
         icon = findViewById(R.id.app_icon);
