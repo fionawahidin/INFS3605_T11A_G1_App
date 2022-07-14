@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/drawable/ic_help.xml" value="0.5567708333333333" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_detail.xml" value="0.4678442028985507" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_main.xml" value="0.4678442028985507" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_sign_in.xml" value="0.67" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_sign_up.xml" value="0.4678442028985507" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_start_screen.xml" value="0.33242753623188404" />
         <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/activity_welcome.xml" value="0.33242753623188404" />
+        <entry key="..\:/Users/Admin/Documents/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/dialog_forgot_password.xml" value="0.458786231884058" />
         <entry key="..\:/Users/kelly/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.48" />
         <entry key="..\:/Users/kelly/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/drawable/bg_white_rounded.xml" value="0.312" />
         <entry key="..\:/Users/kelly/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/drawable/ic_email.xml" value="0.48" />

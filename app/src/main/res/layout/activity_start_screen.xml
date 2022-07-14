@@ -24,7 +24,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/noto_sans"
         android:text="Impact Tracker"
-        android:textColor="@color/black"
+        android:textColor="@color/impactio_teal"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/start_icon1"
