@@ -70,18 +70,21 @@ public class SignInActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(email)) {
             etEmail.setError("Email is required!");
             etEmail.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             etEmail.setError("Please provide valid email!");
             etEmail.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if(TextUtils.isEmpty(password)) {
             etPassword.setError("Password is required!");
             etPassword.requestFocus();
+            progressBar.setVisibility(View.GONE);
         }
 
         else {
