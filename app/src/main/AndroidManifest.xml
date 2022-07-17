@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.infs3605_t11a_g1_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +19,12 @@
             android:exported="true" />
         <activity
             android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".OverviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FormActivity"
             android:exported="true" />
         <activity
             android:name=".StartScreen"

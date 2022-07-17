@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_formTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Update Form"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text="I confirm that all details provided in this report is accurate, and understand any falsified information can result in consequences by WWF."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lay_form"
+        android:layout_width="412dp"
+        android:layout_height="427dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_formTitle">
+
+        <EditText
+            android:id="@+id/et_projectID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Confirm Project ID: " />
+
+        <EditText
+            android:id="@+id/et_solutionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingBottom="20dp"
+            android:text="Confirm Solution Name:" />
+
+        <EditText
+            android:id="@+id/et_progress"
+            android:layout_width="358dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="What has been achieved since the last reporting period?" />
+
+        <EditText
+            android:id="@+id/et_problems"
+            android:layout_width="358dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:paddingRight="20dp"
+            android:text="What are some problems that have arisen during this stage?" />
+
+        <EditText
+            android:id="@+id/et_next"
+            android:layout_width="358dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="What are the planned achievements for the next reporting period?" />
+
+        <EditText
+            android:id="@+id/et_percentage"
+            android:layout_width="358dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:paddingRight="20dp"
+            android:text="What percentage of the project is now complete?" />
+
+        <EditText
+            android:id="@+id/et_funding"
+            android:layout_width="358dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:paddingRight="20dp"
+            android:text="How much funding has been used up to now?" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
