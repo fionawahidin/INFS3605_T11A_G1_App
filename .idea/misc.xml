@@ -24,12 +24,13 @@
         <entry key="..\:/Users/kelly/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/layout/solution_list_view.xml" value="1.25" />
         <entry key="..\:/Users/kelly/StudioProjects/INFS3605_T11A_G1_App/app/src/main/res/menu/menu_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_form.xml" value="0.16358839050131926" />
+        <entry key="app/src/main/res/layout/activity_form.xml" value="0.32639966979819424" />
         <entry key="app/src/main/res/layout/activity_form1.xml" value="0.4814015706380208" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.267108154296875" />
-        <entry key="app/src/main/res/layout/activity_overview.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_overview.xml" value="0.30898590087890626" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/solution_list_view.xml" value="0.47700398763020835" />
       </map>
     </option>

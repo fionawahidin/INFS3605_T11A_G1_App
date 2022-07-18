@@ -93,7 +93,7 @@ public class SignInActivity extends AppCompatActivity {
                 startActivity(new Intent(SignInActivity.this, MainActivity.class));
             } if (etEmail.getText().toString().equals("test@user.com") && etPassword.getText().toString().equals("user")) {
                 Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SignInActivity.this, FormActivity.class));
+                startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
             } else {
                 Toast.makeText(SignInActivity.this, "Failed to sign in!", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);

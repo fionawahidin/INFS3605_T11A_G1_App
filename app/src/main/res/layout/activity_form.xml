@@ -17,17 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/cb_confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:text="I confirm that all details provided in this report is accurate, and understand any falsified information can result in consequences by WWF."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
@@ -54,7 +43,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Confirm Project ID: " />
+            android:hint="Confirm Project ID: " />
 
         <EditText
             android:id="@+id/et_solutionName"
@@ -64,7 +53,7 @@
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:paddingBottom="20dp"
-            android:text="Confirm Solution Name:" />
+            android:hint="Confirm Solution Name:" />
 
         <EditText
             android:id="@+id/et_progress"
@@ -73,7 +62,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:text="What has been achieved since the last reporting period?" />
+            android:hint="What has been achieved since the last reporting period?" />
 
         <EditText
             android:id="@+id/et_problems"
@@ -83,7 +72,7 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:paddingRight="20dp"
-            android:text="What are some problems that have arisen during this stage?" />
+            android:hint="What are some problems that have arisen during this stage?" />
 
         <EditText
             android:id="@+id/et_next"
@@ -92,7 +81,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:text="What are the planned achievements for the next reporting period?" />
+            android:hint="What are the planned achievements for the next reporting period?" />
 
         <EditText
             android:id="@+id/et_percentage"
@@ -102,7 +91,7 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:paddingRight="20dp"
-            android:text="What percentage of the project is now complete?" />
+            android:hint="What percentage of the project is now complete?" />
 
         <EditText
             android:id="@+id/et_funding"
@@ -112,7 +101,7 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:paddingRight="20dp"
-            android:text="How much funding has been used up to now?" />
+            android:hint="How much funding has been used up to now?" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

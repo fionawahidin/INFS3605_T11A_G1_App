@@ -103,10 +103,21 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         queue.add(stringRequest);
     }
 
+    protected void launchOverviewActivity() {
+        Intent formIntent = new Intent(FormActivity.this, OverviewActivity.class);
+        formIntent.putExtra("Progress", mProgress.getText().toString());
+        formIntent.putExtra("Problems", mProblems.getText().toString());
+        formIntent.putExtra("Plans", mPlans.getText().toString());
+        formIntent.putExtra("Percentage", mPercentage.getText().toString());
+        formIntent.putExtra("Funding", mFunding.getText().toString());
+        startActivity(formIntent);
+    }
+
     @Override
     public void onClick(View v) {
         if(v==mSubmit){
             addItemToSheet();
+            launchOverviewActivity();
         }
     }
 }

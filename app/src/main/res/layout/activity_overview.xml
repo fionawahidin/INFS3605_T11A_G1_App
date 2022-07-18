@@ -5,6 +5,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tv_funding"
+        android:layout_width="311dp"
+        android:layout_height="51dp"
+        android:text="$50,000 AUD"
+        app:layout_constraintStart_toStartOf="@+id/tv_fundingTItle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fundingTItle" />
+
+    <TextView
+        android:id="@+id/tv_fundingTItle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Funding used so far:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_percentage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_percentage" />
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="311dp"
+        android:layout_height="51dp"
+        android:text="60%"
+        app:layout_constraintStart_toStartOf="@+id/tv_percentageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_percentageTitle" />
+
+    <TextView
+        android:id="@+id/tv_percentageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Percentage of project completed currently:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_plans"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plans" />
+
+    <TextView
+        android:id="@+id/tv_plans"
+        android:layout_width="311dp"
+        android:layout_height="51dp"
+        android:text="Our team are planning on starting production of water filtering equipment for the next period."
+        app:layout_constraintStart_toStartOf="@+id/tv_plansTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plansTitle" />
+
+    <TextView
+        android:id="@+id/tv_plansTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Plans for next reporting period:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_problems"
+        app:layout_constraintTop_toBottomOf="@+id/tv_problems" />
+
+    <TextView
+        android:id="@+id/tv_problems"
+        android:layout_width="311dp"
+        android:layout_height="51dp"
+        android:text="Due to a lack of human capital, progress has been slower than expected."
+        app:layout_constraintStart_toStartOf="@+id/tv_problemsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_problemsTitle" />
+
+    <TextView
+        android:id="@+id/tv_problemsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Problems encountered:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_progress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_progress" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="311dp"
+        android:layout_height="51dp"
+        android:text="Our project is more than halfway completed, with the dam ready to be utilised. "
+        app:layout_constraintStart_toStartOf="@+id/tv_progressTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_progressTitle" />
+
+    <TextView
+        android:id="@+id/tv_solutionName"
+        android:layout_width="324dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="10dp"
+        android:text="Clean water for Regeneration"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_projectId"
+        app:layout_constraintTop_toBottomOf="@+id/tv_projectId" />
+
     <Button
         android:id="@+id/btn_update"
         android:layout_width="wrap_content"
@@ -14,5 +104,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/tv_projectId"
+        android:layout_width="204dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="RG1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_progressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Progress for this period:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_solutionName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_solutionName" />
+
+    <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Overview of Project Status"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
