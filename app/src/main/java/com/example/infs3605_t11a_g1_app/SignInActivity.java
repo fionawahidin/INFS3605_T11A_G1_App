@@ -38,7 +38,6 @@ public class SignInActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         MaterialButton btnSignIn = findViewById(R.id.signIn_btnSignIn);
-        //TextView tvSignUp = findViewById(R.id.signIn_tvSignUp);
         TextView tvForgotPassword = findViewById(R.id.tvForgotPassword);
         progressBar = findViewById(R.id.signIn_progressBar);
         etEmail = findViewById(R.id.signIn_etEmail);
@@ -48,9 +47,7 @@ public class SignInActivity extends AppCompatActivity {
         title.setVisibility(INVISIBLE);
         icon.setVisibility(INVISIBLE);
         btnSignIn.setVisibility(INVISIBLE);
-
-        //tvSignUp.setOnClickListener(view -> Toast.makeText(SignInActivity.this, "unavailable", Toast.LENGTH_SHORT).show());
-
+        
         tvForgotPassword.setOnClickListener(view -> resetPassword());
 
         btnSignIn.setOnClickListener(view -> handleSignInOnClick());

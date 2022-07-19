@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108211585432",
+    "firebase_url": "https://infs3605-app-2bbeb-default-rtdb.firebaseio.com",
+    "project_id": "infs3605-app-2bbeb",
+    "storage_bucket": "infs3605-app-2bbeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108211585432:android:da9d4e914b5af355b4ebed",
+        "android_client_info": {
+          "package_name": "com.example.infs3605_t11a_g1_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108211585432-hl6tsuu1akqq53trs84rdlh9pq9uokr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKcV4Xy2A_RDygn-ngdcmnMo6qpeGvPfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108211585432-hl6tsuu1akqq53trs84rdlh9pq9uokr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
