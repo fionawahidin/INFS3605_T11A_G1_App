@@ -89,10 +89,17 @@ public class SignInActivity extends AppCompatActivity {
 
         else {
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
+                if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().equals("curator@impactio.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                } else {
+                }
+
+                else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().equals("projectleader@impactio.com")) {
+                    Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
+                }
+
+                else {
                     Toast.makeText(SignInActivity.this, "Failed to sign in!", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     task.getException();
