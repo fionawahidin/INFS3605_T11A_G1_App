@@ -22,9 +22,12 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class SignInActivity extends AppCompatActivity {
 
+    private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private TextInputEditText etEmail, etPassword;
     private ProgressBar progressBar;
     private static final String TAG = SignInActivity.class.getName();
@@ -47,7 +50,7 @@ public class SignInActivity extends AppCompatActivity {
         title.setVisibility(INVISIBLE);
         icon.setVisibility(INVISIBLE);
         btnSignIn.setVisibility(INVISIBLE);
-        
+
         tvForgotPassword.setOnClickListener(view -> resetPassword());
 
         btnSignIn.setOnClickListener(view -> handleSignInOnClick());
@@ -85,16 +88,16 @@ public class SignInActivity extends AppCompatActivity {
         }
 
         else {
-            if (etEmail.getText().toString().equals("admin@impactio.com") && etPassword.getText().toString().equals("admin")) {
-                Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SignInActivity.this, MainActivity.class));
-            } if (etEmail.getText().toString().equals("test@user.com") && etPassword.getText().toString().equals("user")) {
-                Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
-            } else {
-                Toast.makeText(SignInActivity.this, "Failed to sign in!", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-            };
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                } else {
+                    Toast.makeText(SignInActivity.this, "Failed to sign in!", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    task.getException();
+                }
+            });
         }
     }
 
@@ -124,10 +127,18 @@ public class SignInActivity extends AppCompatActivity {
             }
 
             else {
-                CharSequence output = "Please check your email to reset password!";
-                tvOutput.setText(output);
-                final Handler handler = new Handler(Looper.getMainLooper());
-                handler.postDelayed(dialog::dismiss, 2000);
+                mAuth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        CharSequence output = "Please check your email to reset password!";
+                        tvOutput.setText(output);
+                        final Handler handler = new Handler(Looper.getMainLooper());
+                        handler.postDelayed(dialog::dismiss, 2000);
+                    } else {
+                        CharSequence output = "We cannot find your email. Please try again!";
+                        tvOutput.setText(output);
+                        dialogProgressBar.setVisibility(View.GONE);
+                    }
+                });
             }
         });
 
