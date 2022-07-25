@@ -36,8 +36,6 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_form);
 
-        mBaselineOne = (EditText)findViewById(R.id.et_baselineOne);
-        mBaselineTwo = (EditText)findViewById(R.id.et_baselineTwo);
         mCurrentOne = (EditText)findViewById(R.id.et_currentOne);
         mCurrentTwo = (EditText)findViewById(R.id.et_currentTwo);
         mSubmit = (Button)findViewById(R.id.btn_submit);
@@ -75,8 +73,6 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
                 //here we pass params
                 params.put("action", "updateProject");
-                params.put("baselineOne", baselineOne);
-                params.put("baselineTwo", baselineTwo);
                 params.put("currentOne", currentOne);
                 params.put("currentTwo", currentTwo);
 
@@ -96,8 +92,6 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void launchOverviewActivity() {
         Intent formIntent = new Intent(FormActivity.this, OverviewActivity.class);
-        formIntent.putExtra("Baseline One ", mBaselineOne.getText().toString());
-        formIntent.putExtra("Baseline Two ", mBaselineTwo.getText().toString());
         formIntent.putExtra("Current One", mCurrentOne.getText().toString());
         formIntent.putExtra("Current Two", mCurrentTwo.getText().toString());
         startActivity(formIntent);
