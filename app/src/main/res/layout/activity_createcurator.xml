@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_challenges5"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Provide a brief description of your solution."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_challenges"
+        app:layout_constraintTop_toBottomOf="@+id/sp_challenges" />
+
+    <EditText
+        android:id="@+id/tv_solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Solution Name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_createTItle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Create Account"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_challenges"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_challenges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_challenges" />
+
+    <TextView
+        android:id="@+id/tv_challenges"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="What Challenge is your solution for?"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_solution"
+        app:layout_constraintTop_toBottomOf="@+id/tv_solution" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="361dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/tv_challenges5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_challenges5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,12 +19,15 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText mProjectId,mSolutionName, mProgress, mProblems, mPlans, mPercentage, mFunding;
+    EditText mBaselineOne, mBaselineTwo, mCurrentOne, mCurrentTwo;
     Button mSubmit;
 
     @Override
@@ -33,28 +36,19 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_form);
 
-        mProjectId = (EditText)findViewById(R.id.et_projectID);
-        mSolutionName = (EditText)findViewById(R.id.et_solutionName);
-        mProgress = (EditText)findViewById(R.id.et_progress);
-        mProblems = (EditText)findViewById(R.id.et_problems);
-        mPlans = (EditText)findViewById(R.id.et_next);
-        mPercentage = (EditText)findViewById(R.id.et_percentage);
-        mFunding = (EditText)findViewById(R.id.et_funding);
-
+        mBaselineOne = (EditText)findViewById(R.id.et_baselineOne);
+        mBaselineTwo = (EditText)findViewById(R.id.et_baselineTwo);
+        mCurrentOne = (EditText)findViewById(R.id.et_currentOne);
+        mCurrentTwo = (EditText)findViewById(R.id.et_currentTwo);
         mSubmit = (Button)findViewById(R.id.btn_submit);
         mSubmit.setOnClickListener(this);
     }
-
     private void addItemToSheet() {
         final ProgressDialog loading = ProgressDialog.show(this,"Updating Project","Please wait");
-        final String id = mProjectId.getText().toString().trim();
-        final String name = mSolutionName.getText().toString().trim();
-        final String progress = mProgress.getText().toString().trim();
-        final String problems = mProblems.getText().toString().trim();
-        final String plans = mPlans.getText().toString().trim();
-        final String percentage = mPercentage.getText().toString().trim();
-        final String funding = mFunding.getText().toString().trim();
-
+        final String baselineOne = mBaselineOne.getText().toString().trim();
+        final String baselineTwo = mBaselineTwo.getText().toString().trim();
+        final String currentOne = mCurrentOne.getText().toString().trim();
+        final String currentTwo = mCurrentTwo.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwk03NgPjghNJY1WzEFg1GQPmJIA3tSW3FxSmz9uduKmSEe1zkpjRX-1U7ZRUR-Fjm4/exec",
                 new Response.Listener<String>() {
@@ -81,13 +75,10 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
                 //here we pass params
                 params.put("action", "updateProject");
-                params.put("projectId", id);
-                params.put("solutionName", name);
-                params.put("progress", progress);
-                params.put("problems", problems);
-                params.put("plans", plans);
-                params.put("percentageProgress", percentage);
-                params.put("currentFunding", funding);
+                params.put("baselineOne", baselineOne);
+                params.put("baselineTwo", baselineTwo);
+                params.put("currentOne", currentOne);
+                params.put("currentTwo", currentTwo);
 
                 return params;
             }
@@ -105,11 +96,10 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void launchOverviewActivity() {
         Intent formIntent = new Intent(FormActivity.this, OverviewActivity.class);
-        formIntent.putExtra("Progress", mProgress.getText().toString());
-        formIntent.putExtra("Problems", mProblems.getText().toString());
-        formIntent.putExtra("Plans", mPlans.getText().toString());
-        formIntent.putExtra("Percentage", mPercentage.getText().toString());
-        formIntent.putExtra("Funding", mFunding.getText().toString());
+        formIntent.putExtra("Baseline One ", mBaselineOne.getText().toString());
+        formIntent.putExtra("Baseline Two ", mBaselineTwo.getText().toString());
+        formIntent.putExtra("Current One", mCurrentOne.getText().toString());
+        formIntent.putExtra("Current Two", mCurrentTwo.getText().toString());
         startActivity(formIntent);
     }
 
@@ -120,4 +110,8 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
             launchOverviewActivity();
         }
     }
+
+
+
+
 }
