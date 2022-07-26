@@ -6,39 +6,59 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_currentTwoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Current"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_previousTwoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_previousTwoTitle" />
+
+    <TextView
+        android:id="@+id/tv_currentOneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Current"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_previousOneTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_previousOneTitle" />
+
+    <TextView
         android:id="@+id/tv_baselineTwo"
         android:layout_width="302dp"
         android:layout_height="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toEndOf="@+id/tv_previousTwoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
         android:id="@+id/et_currentTwo"
         android:layout_width="307dp"
         android:layout_height="33dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="567dp" />
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwo" />
 
     <EditText
         android:id="@+id/et_currentOne"
         android:layout_width="307dp"
         android:layout_height="33dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOne" />
+        app:layout_constraintStart_toStartOf="@+id/tv_previousOne"
+        app:layout_constraintTop_toBottomOf="@+id/tv_previousOne" />
 
     <TextView
         android:id="@+id/textView11"
@@ -58,16 +78,18 @@ threatened species"
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:text="Ensure 10+ species are on a recovery path"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="26dp"
-        android:layout_height="23dp"
+        android:layout_width="62dp"
+        android:layout_height="22dp"
         android:layout_marginTop="20dp"
-        android:text="KPI"
+        android:text="KPI Two"
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -75,11 +97,11 @@ threatened species"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tv_previousTwoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Current"
+        android:layout_marginTop="12dp"
+        android:text="Previous"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -88,43 +110,43 @@ threatened species"
         android:id="@+id/textView14"
         android:layout_width="64dp"
         android:layout_height="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:text="Baseline"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/tv_target2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="88dp"
         android:text="Target 15.5"
         android:textColor="#52C1C9"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_previousOneTitle" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="111dp"
         android:layout_height="107dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_previousOneTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_previousOneTitle"
         app:srcCompat="@drawable/sdg_15" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="Baseline"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/tv_formTitle"
@@ -190,16 +212,18 @@ afforestation and reforestation globally"
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="Aim for 100,000 acres of land restoration"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="26dp"
-        android:layout_height="23dp"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
         android:layout_marginTop="20dp"
-        android:text="KPI"
+        android:text="KPI One"
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -207,24 +231,23 @@ afforestation and reforestation globally"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tv_previousOneTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Current"
+        android:text="Previous"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/tv_baselineOne"
+        android:id="@+id/tv_previousOne"
         android:layout_width="302dp"
         android:layout_height="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
