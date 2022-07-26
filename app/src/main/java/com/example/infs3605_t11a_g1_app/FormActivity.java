@@ -19,9 +19,6 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +35,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
         mCurrentOne = (EditText)findViewById(R.id.et_currentOne);
         mCurrentTwo = (EditText)findViewById(R.id.et_currentTwo);
-        mSubmit = (Button)findViewById(R.id.btn_submit);
+        mSubmit = (Button)findViewById(R.id.btn_formSubmit);
         mSubmit.setOnClickListener(this);
     }
     private void addItemToSheet() {
