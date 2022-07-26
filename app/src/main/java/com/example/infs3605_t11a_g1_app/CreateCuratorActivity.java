@@ -15,10 +15,9 @@ public class CreateCuratorActivity  extends AppCompatActivity {
         setContentView(R.layout.activity_createcurator);
 
         Spinner challengeDropdown = findViewById(R.id.sp_challenges);
-        String[] challenges = new String[] {"The Great Fashion Decarbonisation", "Innovate to Regenerate", "Cities of Tomorrow", "Bushfire Regeneration Challenge"};
+        String[] challenges = new String[]{"The Great Fashion Decarbonisation", "Innovate to Regenerate", "Cities of Tomorrow", "Bushfire Regeneration Challenge"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, challenges);
         challengeDropdown.setAdapter(adapter);
     }
-
 
 }
