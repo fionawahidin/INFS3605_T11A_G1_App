@@ -96,7 +96,7 @@ public class SignInActivity extends AppCompatActivity {
 
                 else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().equals("projectleader@impactio.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
+                    startActivity(new Intent(SignInActivity.this, CreateProjectLeaderActivity.class));
                 }
 
                 else {

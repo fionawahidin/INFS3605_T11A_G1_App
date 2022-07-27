@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/tv_baselinekpiTwo"
+        android:id="@+id/et_baselinekpiTwo"
         android:layout_width="360dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -43,8 +43,8 @@
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselinekpi"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselinekpi" />
+        app:layout_constraintStart_toStartOf="@+id/et_baselinekpiOne"
+        app:layout_constraintTop_toBottomOf="@+id/et_baselinekpiOne" />
 
     <TextView
         android:id="@+id/tv_baselineone"
@@ -55,11 +55,11 @@
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/sp_kpis"
-        app:layout_constraintTop_toBottomOf="@+id/sp_kpis" />
+        app:layout_constraintStart_toStartOf="@+id/sp_kpisOne"
+        app:layout_constraintTop_toBottomOf="@+id/sp_kpisOne" />
 
     <Spinner
-        android:id="@+id/sp_kpis"
+        android:id="@+id/sp_kpisOne"
         android:layout_width="371dp"
         android:layout_height="31dp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpis"
@@ -74,8 +74,8 @@
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintStart_toStartOf="@+id/et_desc"
+        app:layout_constraintTop_toBottomOf="@+id/et_desc" />
 
     <TextView
         android:id="@+id/tv_challenges5"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sp_challenges" />
 
     <EditText
-        android:id="@+id/tv_solution"
+        android:id="@+id/et_solution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -140,11 +140,11 @@
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_solution"
-        app:layout_constraintTop_toBottomOf="@+id/tv_solution" />
+        app:layout_constraintStart_toStartOf="@+id/et_solution"
+        app:layout_constraintTop_toBottomOf="@+id/et_solution" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/et_desc"
         android:layout_width="361dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -154,7 +154,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_challenges5" />
 
     <EditText
-        android:id="@+id/tv_baselinekpi"
+        android:id="@+id/et_baselinekpiOne"
         android:layout_width="360dp"
         android:layout_height="47dp"
         android:ems="10"

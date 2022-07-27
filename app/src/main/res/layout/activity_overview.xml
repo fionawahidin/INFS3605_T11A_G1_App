@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_progressTitle" />
 
     <TextView
-        android:id="@+id/tv_solution"
+        android:id="@+id/et_solution"
         android:layout_width="324dp"
         android:layout_height="33dp"
         android:layout_marginTop="10dp"
@@ -124,8 +124,8 @@
         android:layout_marginTop="20dp"
         android:text="Progress for this period:"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_solution"
-        app:layout_constraintTop_toBottomOf="@+id/tv_solution" />
+        app:layout_constraintStart_toStartOf="@+id/et_solution"
+        app:layout_constraintTop_toBottomOf="@+id/et_solution" />
 
     <TextView
         android:id="@+id/tv_overview"
