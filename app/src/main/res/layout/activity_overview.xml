@@ -28,8 +28,8 @@
 
     <TextView
         android:id="@+id/tv_baseKpiOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="25dp"
         android:layout_marginStart="72dp"
         android:text=""
         android:textSize="16sp"
@@ -60,8 +60,8 @@
 
     <TextView
         android:id="@+id/tv_currentKpiOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="22dp"
         android:layout_marginStart="80dp"
         android:text=""
         android:textSize="16sp"
@@ -70,9 +70,9 @@
 
     <TextView
         android:id="@+id/tv_targetKpiTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_width="117dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="76dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_targetOneTitle5"
@@ -93,9 +93,9 @@
 
     <TextView
         android:id="@+id/tv_currentKpiTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_width="106dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="76dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_currentOneTitle5"
@@ -103,8 +103,8 @@
 
     <TextView
         android:id="@+id/tv_baseKpiTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
         android:layout_marginStart="66dp"
         android:text=""
         android:textSize="16sp"
@@ -167,8 +167,8 @@
 
     <TextView
         android:id="@+id/tv_targetKpiOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="23dp"
         android:layout_marginStart="84dp"
         android:text=""
         android:textSize="16sp"
