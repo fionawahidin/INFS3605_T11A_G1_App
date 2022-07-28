@@ -10,24 +10,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class OverviewActivity extends AppCompatActivity {
     private Button mUpdate;
-    private TextView mProgress, mProblems, mPlans, mPercentage, mFunding;
+    private TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo,
+            mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
 
-        Intent formIntent = getIntent();
-        mProgress = findViewById(R.id.tv_progress);
-        mProgress.setText(formIntent.getStringExtra("Progress"));
-        mProblems = findViewById(R.id.tv_problems);
-        mProblems.setText(formIntent.getStringExtra("Problems"));
-        mPlans = findViewById(R.id.tv_plans);
-        mPlans.setText(formIntent.getStringExtra("Plans"));
-        mPercentage = findViewById(R.id.tv_percentage);
-        mPercentage.setText(formIntent.getStringExtra("Percentage"));
-        mFunding = findViewById(R.id.tv_funding);
-        mFunding.setText(formIntent.getStringExtra("Funding"));
+        mTargetSdgOne = findViewById(R.id.tv_sdgTargetOne);
+        mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwo);
+        mTargetKpiOne = findViewById(R.id.tv_targetKpiOne);
+        mTargetKpiTwo = findViewById(R.id.tv_targetKpiTwo);
+        mBaselineKpiOne = findViewById(R.id.tv_baseKpiOne);
+        mBaselineKpiTwo = findViewById(R.id.tv_baseKpiTwo);
+        mCurrentKpiOne = findViewById(R.id.tv_currentKpiOne);
+        mCurrentKpiTwo = findViewById(R.id.tv_currentKpiTwo);
+
 
         mUpdate = findViewById(R.id.btn_update);
         mUpdate.setOnClickListener(new View.OnClickListener() {

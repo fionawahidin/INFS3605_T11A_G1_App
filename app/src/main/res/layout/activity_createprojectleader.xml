@@ -5,78 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_baselinekpiTwo"
-        android:layout_width="360dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineone2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineone2" />
-
-    <TextView
-        android:id="@+id/tv_baselineone2"
-        android:layout_width="324dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:text="Input a baseline for the selected KPI."
-        android:textColor="#70D0D8"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/sp_kpisTwo"
-        app:layout_constraintTop_toBottomOf="@+id/sp_kpisTwo" />
-
-    <Spinner
-        android:id="@+id/sp_kpisTwo"
-        android:layout_width="371dp"
-        android:layout_height="31dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselinesec"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselinesec" />
-
-    <TextView
-        android:id="@+id/tv_baselinesec"
-        android:layout_width="383dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="20dp"
-        android:text="Select a KPI to measure the impact of your solution."
-        android:textColor="#70D0D8"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/et_baselinekpiOne"
-        app:layout_constraintTop_toBottomOf="@+id/et_baselinekpiOne" />
-
-    <TextView
-        android:id="@+id/tv_baselineone"
-        android:layout_width="324dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="20dp"
-        android:text="Input a baseline for the selected KPI."
-        android:textColor="#70D0D8"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/sp_kpisOne"
-        app:layout_constraintTop_toBottomOf="@+id/sp_kpisOne" />
-
-    <Spinner
-        android:id="@+id/sp_kpisOne"
-        android:layout_width="371dp"
-        android:layout_height="31dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_kpis"
-        app:layout_constraintTop_toBottomOf="@+id/tv_kpis" />
-
-    <TextView
-        android:id="@+id/tv_kpis"
-        android:layout_width="383dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="20dp"
-        android:text="Select a KPI to measure the impact of your solution."
-        android:textColor="#70D0D8"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/et_desc"
-        app:layout_constraintTop_toBottomOf="@+id/et_desc" />
-
     <TextView
         android:id="@+id/tv_challenges5"
         android:layout_width="324dp"
@@ -153,25 +81,16 @@
         app:layout_constraintStart_toStartOf="@+id/tv_challenges5"
         app:layout_constraintTop_toBottomOf="@+id/tv_challenges5" />
 
-    <EditText
-        android:id="@+id/et_baselinekpiOne"
-        android:layout_width="360dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineone"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineone" />
-
     <Button
-        android:id="@+id/btn_createSubmit"
+        android:id="@+id/bts_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Submit"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

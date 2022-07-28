@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_targetsTwo"
+        android:layout_width="383dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="36dp"
+        android:text="Select a Target Sustainable Development Goal (SDG)."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/et_baselinekpiOne"
+        app:layout_constraintTop_toBottomOf="@+id/et_baselinekpiOne" />
+
+    <Spinner
+        android:id="@+id/sp_kpisTwo"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselinesec"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselinesec" />
+
+    <EditText
+        android:id="@+id/et_baselinekpiTwo"
+        android:layout_width="360dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineone2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineone2" />
+
+    <TextView
+        android:id="@+id/tv_baselinesec"
+        android:layout_width="383dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="24dp"
+        android:text="Select a KPI to measure the impact of your solution."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_targetsTwo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_targetsTwo" />
+
+    <Spinner
+        android:id="@+id/sp_targetsTwo"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetsTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetsTwo" />
+
+    <TextView
+        android:id="@+id/tv_baselineone2"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Input a baseline for the selected KPI."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_kpisTwo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_kpisTwo" />
+
+    <TextView
+        android:id="@+id/tv_targetsOne"
+        android:layout_width="383dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Select a Target Sustainable Development Goal (SDG)."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_targetsOne"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetsOne"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetsOne" />
+
+    <TextView
+        android:id="@+id/tv_baselineone"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:text="Input a baseline for the selected KPI."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_kpisOne"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <EditText
+        android:id="@+id/et_baselinekpiOne"
+        android:layout_width="360dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineone" />
+
+    <Spinner
+        android:id="@+id/sp_kpisOne"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_kpis"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kpis" />
+
+    <TextView
+        android:id="@+id/tv_kpis"
+        android:layout_width="383dp"
+        android:layout_height="26dp"
+        android:text="Select a KPI to measure the impact of your solution."
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_targetsOne"
+        app:layout_constraintTop_toBottomOf="@+id/sp_targetsOne" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,12 +9,10 @@ public class ProjectLeader {
     private String kpiOne;
     private String kpiTwoSpin;
     private String kpiTwo;
+    private String targetOne;
+    private String targetTwo;
 
-    public ProjectLeader() {
-
-    }
-
-    public ProjectLeader(String name, String solutionName, String challengeSpin, String desc, String kpiOneSpin, String kpiOne, String kpiTwoSpin, String kpiTwo) {
+    public ProjectLeader(String name, String solutionName, String challengeSpin, String desc, String kpiOneSpin, String kpiOne, String kpiTwoSpin, String kpiTwo, String targetOne, String targetTwo) {
         this.name = name;
         this.solutionName = solutionName;
         this.challengeSpin = challengeSpin;
@@ -23,6 +21,13 @@ public class ProjectLeader {
         this.kpiOne = kpiOne;
         this.kpiTwoSpin = kpiTwoSpin;
         this.kpiTwo = kpiTwo;
+        this.targetOne = targetOne;
+        this.targetTwo = targetTwo;
+    }
+
+
+    public ProjectLeader() {
+
     }
 
     public String getName() {
@@ -87,5 +92,21 @@ public class ProjectLeader {
 
     public void setKpiTwo(String kpiTwo) {
         this.kpiTwo = kpiTwo;
+    }
+
+    public String getTargetOne() {
+        return targetOne;
+    }
+
+    public void setTargetOne(String targetOne) {
+        this.targetOne = targetOne;
+    }
+
+    public String getTargetTwo() {
+        return targetTwo;
+    }
+
+    public void setTargetTwo(String targetTwo) {
+        this.targetTwo = targetTwo;
     }
 }

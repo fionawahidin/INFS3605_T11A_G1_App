@@ -21,6 +21,9 @@
             android:name=".CreateProjectLeaderActivity"
             android:exported="true" />
         <activity
+            android:name=".CreateProjectLeaderTwoActivity"
+            android:exported="true" />
+        <activity
             android:name=".DetailActivity"
             android:exported="true" />
         <activity
