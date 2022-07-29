@@ -53,11 +53,12 @@ public class OverviewActivity extends AppCompatActivity {
             }
         });
 
-        DatabaseReference databaseRef= FirebaseDatabase.getInstance().getReference();
-        databaseRef.child("ProjectLeader").addValueEventListener(new ValueEventListener() {
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+        databaseRef.addValueEventListener(new ValueEventListener() {
+            //        databaseRef.child("ProjectLeader").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds : dataSnapshot.getChildren()){
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     String targetOne = ds.child("targetOne").getValue(String.class);
                     String targetTwo = ds.child("targetTwo").getValue(String.class);
                     String kpiOne = ds.child("kpiOne").getValue(String.class);
@@ -85,12 +86,6 @@ public class OverviewActivity extends AppCompatActivity {
         });
     }
 }
-
-
-
-
-
-
         //                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 //                    ProjectLeader projectLeader = postSnapshot.child("ProjectLeader").getValue(ProjectLeader.class);
 //
