@@ -9,7 +9,7 @@
         android:id="@+id/tv_currentTwoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Current"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineTwoTitle"
@@ -19,7 +19,7 @@
         android:id="@+id/tv_currentOneTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Current"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineOneTitle"
@@ -29,12 +29,11 @@
         android:id="@+id/tv_baselineTwo"
         android:layout_width="302dp"
         android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_baselineTwoTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoTitle" />
+        app:layout_constraintStart_toStartOf="@+id/tv_targetTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwo" />
 
     <EditText
         android:id="@+id/et_currentTwo"
@@ -64,14 +63,13 @@
         android:id="@+id/textView11"
         android:layout_width="260dp"
         android:layout_height="77dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="Take urgent and significant action to reduce the
 degradation of natural habitats, halt the loss of biodiversity
 and, by 2020, protect and prevent the extinction of
 threatened species"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/tv_target2"
         app:layout_constraintTop_toBottomOf="@+id/tv_target2" />
 
     <TextView
@@ -79,16 +77,15 @@ threatened species"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
         android:text="Ensure 10+ species are on a recovery path"
         app:layout_constraintStart_toEndOf="@+id/tv_targetTwoTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_kpiTwo" />
+        app:layout_constraintTop_toTopOf="@+id/tv_targetTwoTitle" />
 
     <TextView
         android:id="@+id/tv_kpiTwo"
         android:layout_width="62dp"
         android:layout_height="22dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="KPI Two"
         android:textColor="#70D0D8"
         android:textSize="16sp"
@@ -100,7 +97,7 @@ threatened species"
         android:id="@+id/tv_baselineTwoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Baseline"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetTwoTitle"
@@ -108,9 +105,9 @@ threatened species"
 
     <TextView
         android:id="@+id/tv_targetTwoTitle"
-        android:layout_width="64dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="51dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
         android:text="Target"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiTwo"
@@ -121,21 +118,20 @@ threatened species"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
         android:text="Target 15.5"
         android:textColor="#52C1C9"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneTitle" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="111dp"
         android:layout_height="107dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineOneTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneTitle"
+        android:layout_marginTop="156dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/sdg_15" />
 
     <TextView
@@ -168,14 +164,17 @@ threatened species"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_currentTwo"
+        app:layout_constraintVertical_bias="0.087" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="111dp"
         android:layout_height="107dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_formTitle"
         app:srcCompat="@drawable/sdg_15" />
@@ -185,13 +184,12 @@ threatened species"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:text="Target 15.2"
         android:textColor="#52C1C9"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_formTitle" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView5"
@@ -212,7 +210,7 @@ afforestation and reforestation globally"
         android:id="@+id/tv_targetOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:text="Aim for 100,000 acres of land restoration"
         app:layout_constraintStart_toEndOf="@+id/tv_targetOneTitle"
         app:layout_constraintTop_toTopOf="@+id/tv_targetOneTitle" />
@@ -221,7 +219,7 @@ afforestation and reforestation globally"
         android:id="@+id/tv_kpiOne"
         android:layout_width="59dp"
         android:layout_height="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="KPI One"
         android:textColor="#70D0D8"
         android:textSize="16sp"
@@ -233,7 +231,7 @@ afforestation and reforestation globally"
         android:id="@+id/tv_baselineOneTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Baseline"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetOneTitle"
@@ -253,11 +251,13 @@ afforestation and reforestation globally"
         android:id="@+id/uploadpdf"
         android:layout_width="60dp"
         android:layout_height="57dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/btn_formSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/et_currentTwo"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_menu_upload" />
 
     <TextView

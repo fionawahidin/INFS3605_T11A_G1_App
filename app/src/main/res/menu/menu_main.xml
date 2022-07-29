@@ -7,15 +7,13 @@
     <item
         android:id="@+id/Notifications"
         android:icon="@drawable/bell_icon"
-        android:title="notifications" />
-    <item android:title="Favourite"
+        android:title="Notifications" />
+    <item
+        android:title="Favourites"
         android:icon = "@drawable/favourite_icon"
         android:id="@+id/favourite"/>
     <item
         android:id="@+id/profile"
         android:icon="@drawable/profile_icon"
         android:title="Profile" />
-    <item android:title="Menu"
-        android:icon = "@drawable/menu_icon"
-        android:id = "@+id/menu"/>
 </menu>
