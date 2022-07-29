@@ -249,4 +249,24 @@ afforestation and reforestation globally"
         app:layout_constraintStart_toStartOf="@+id/tv_targetOne"
         app:layout_constraintTop_toBottomOf="@+id/tv_targetOne" />
 
+    <ImageView
+        android:id="@+id/uploadpdf"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936"
+        app:srcCompat="@android:drawable/ic_menu_upload" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Supporting\n Documents (PDF)"
+        app:layout_constraintEnd_toEndOf="@+id/uploadpdf"
+        app:layout_constraintStart_toStartOf="@+id/uploadpdf"
+        app:layout_constraintTop_toBottomOf="@+id/uploadpdf" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

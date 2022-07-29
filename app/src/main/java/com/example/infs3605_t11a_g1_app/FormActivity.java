@@ -2,14 +2,23 @@ package com.example.infs3605_t11a_g1_app;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -26,6 +35,8 @@ import java.util.Map;
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
     EditText mBaselineOne, mBaselineTwo, mCurrentOne, mCurrentTwo;
     Button mSubmit;
+    ImageView upload;
+    Uri imageuri = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,7 +48,63 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         mCurrentTwo = (EditText)findViewById(R.id.et_currentTwo);
         mSubmit = (Button)findViewById(R.id.btn_formSubmit);
         mSubmit.setOnClickListener(this);
+        upload = findViewById(R.id.uploadpdf);
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent galleryIntent = new Intent();
+                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
+                galleryIntent.setType("application/pdf");
+                startActivityForResult(galleryIntent, 1);
+            }
+        });
     }
+
+    ProgressDialog dialog;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            dialog = new ProgressDialog(this);
+            dialog.setMessage("Uploading");
+            dialog.show();
+            imageuri = data.getData();
+            final String timestamp = "" + System.currentTimeMillis();
+            StorageReference storageReference = FirebaseStorage.getInstance().getReference();
+            final String messagePushID = timestamp;
+            Toast.makeText(FormActivity.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
+
+            final StorageReference filepath = storageReference.child(messagePushID + "." + "pdf");
+            Toast.makeText(FormActivity.this, filepath.getName(), Toast.LENGTH_SHORT).show();
+            filepath.putFile(imageuri).continueWithTask(new Continuation() {
+                @Override
+                public Object then(@NonNull Task task) throws Exception {
+                    if (!task.isSuccessful()) {
+                        throw task.getException();
+                    }
+                    return filepath.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if (task.isSuccessful()) {
+                        dialog.dismiss();
+                        Uri uri = task.getResult();
+                        String myurl;
+                        myurl = uri.toString();
+                        Toast.makeText(FormActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                    } else {
+                        dialog.dismiss();
+                        Toast.makeText(FormActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
+
     private void addItemToSheet() {
         final ProgressDialog loading = ProgressDialog.show(this,"Updating Project","Please wait");
         final String baselineOne = mBaselineOne.getText().toString().trim();
