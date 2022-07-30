@@ -46,14 +46,14 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
 
         Spinner kpiDropdownOne = findViewById(R.id.sp_kpisOne);
         String[] kpisOne = new String[]{"10+ flagship species on recovery path", "10+ culturally important species on recovery path", "100,000 ha under restoration",
-                "1.4 million ha under enhanced legal protection", "Increase by 50% rescued animals released into wild", "75+ Indigenous organisations/communities supported in their efforts to revitalise cultural fire management",
+                "75+ Indigenous organisations/communities supported in their efforts to revitalise cultural fire management",
                 "300 land manager adopt nature-based solutions", "150 regional jobs created"};
         ArrayAdapter<String> kpisAdapterOne = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, kpisOne);
         kpiDropdownOne.setAdapter(kpisAdapterOne);
 
         Spinner kpiDropdownTwo = findViewById(R.id.sp_kpisTwo);
         String[] kpisTwo = new String[]{"10+ flagship species on recovery path", "10+ culturally important species on recovery path", "100,000 ha under restoration",
-                "1.4 million ha under enhanced legal protection", "Increase by 50% rescued animals released into wild", "75+ Indigenous organisations/communities supported in their efforts to revitalise cultural fire management",
+                "75+ Indigenous organisations/communities supported in their efforts to revitalise cultural fire management",
                 "300 land manager adopt nature-based solutions", "150 regional jobs created"};
         ArrayAdapter<String> kpisAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, kpisTwo);
         kpiDropdownTwo.setAdapter(kpisAdapterTwo);
@@ -120,11 +120,17 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 projectLeader.setKpiOne(baselineOne);
                 projectLeader.setKpiTwoSpin(kpiTwo);
                 projectLeader.setKpiTwo(baselineTwo);
+                projectLeader.setCurrentOne("0");
+                projectLeader.setCurrentTwo("0");
+                projectLeader.setImpactScore("0");
+                projectLeader.setBaselineAchieve("N/A");
+
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         databaseReference.setValue(projectLeader);
+                        startActivity(new Intent(CreateProjectLeaderTwoActivity.this, OverviewActivity.class));
                     }
 
                     @Override

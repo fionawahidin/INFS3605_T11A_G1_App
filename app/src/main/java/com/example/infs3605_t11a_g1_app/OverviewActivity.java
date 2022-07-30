@@ -24,7 +24,8 @@ import com.google.firebase.ktx.Firebase;
 public class OverviewActivity extends AppCompatActivity {
     private Button mUpdate;
     private TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo,
-            mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo;
+            mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo,
+            mImpactScore, mBaseAchieve;
     private ProjectLeader projectLeader = new ProjectLeader();
     private FirebaseAuth mAuth;
 
@@ -43,6 +44,8 @@ public class OverviewActivity extends AppCompatActivity {
         mBaselineKpiTwo = findViewById(R.id.tv_baseKpiTwo);
         mCurrentKpiOne = findViewById(R.id.tv_currentKpiOne);
         mCurrentKpiTwo = findViewById(R.id.tv_currentKpiTwo);
+        mImpactScore = findViewById(R.id.tv_impact);
+        mBaseAchieve = findViewById(R.id.tv_baseAchieve);
 
         mUpdate = findViewById(R.id.btn_update);
         mUpdate.setOnClickListener(new View.OnClickListener() {
@@ -67,15 +70,19 @@ public class OverviewActivity extends AppCompatActivity {
                     String kpiTwoSpin = ds.child("kpiTwoSpin").getValue(String.class);
                     String currentOne = ds.child("currentOne").getValue(String.class);
                     String currentTwo = ds.child("currentTwo").getValue(String.class);
+                    String impactScore = ds.child("impactScore").getValue(String.class);
+                    String baselineAchieve = ds.child("baselineAchieve").getValue(String.class);
 
                     mTargetSdgOne.setText(targetOne);
-                    mTargetSdgOne.setText(targetTwo);
+                    mTargetSdgTwo.setText(targetTwo);
                     mBaselineKpiOne.setText(kpiOne);
                     mBaselineKpiTwo.setText(kpiTwo);
                     mTargetKpiOne.setText(kpiOneSpin);
                     mTargetKpiTwo.setText(kpiTwoSpin);
                     mCurrentKpiOne.setText(currentOne);
                     mCurrentKpiTwo.setText(currentTwo);
+                    mImpactScore.setText(impactScore);
+                    mBaseAchieve.setText(baselineAchieve);
                 }
             }
 
