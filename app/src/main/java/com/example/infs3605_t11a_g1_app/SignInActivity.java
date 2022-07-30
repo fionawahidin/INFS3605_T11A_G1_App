@@ -41,6 +41,7 @@ public class SignInActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         MaterialButton btnSignIn = findViewById(R.id.signIn_btnSignIn);
+        TextView tvSignUp = findViewById(R.id.signIn_tvSignUp);
         TextView tvForgotPassword = findViewById(R.id.tvForgotPassword);
         progressBar = findViewById(R.id.signIn_progressBar);
         etEmail = findViewById(R.id.signIn_etEmail);
@@ -54,6 +55,8 @@ public class SignInActivity extends AppCompatActivity {
         tvForgotPassword.setOnClickListener(view -> resetPassword());
 
         btnSignIn.setOnClickListener(view -> handleSignInOnClick());
+
+        tvSignUp.setOnClickListener(view -> startActivity(new Intent(SignInActivity.this, SignUpActivity.class)));
 
         startMainAnimations(icon, title);
 
@@ -89,12 +92,12 @@ public class SignInActivity extends AppCompatActivity {
 
         else {
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().equals("curator@impactio.com")) {
+                if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().endsWith("impactiocurator.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignInActivity.this, MainActivity.class));
                 }
 
-                else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().equals("projectleader@impactio.com")) {
+                else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().endsWith("impactiopl.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
                 }

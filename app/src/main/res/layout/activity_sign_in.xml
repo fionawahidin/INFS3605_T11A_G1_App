@@ -114,6 +114,13 @@
             android:layout_width="250dp"
             android:layout_height="50dp"/>
 
+        <TextView
+            android:id="@+id/signIn_tvSignUp"
+            android:text="@string/no_account"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

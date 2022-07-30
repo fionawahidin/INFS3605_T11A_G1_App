@@ -6,8 +6,12 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="no_account">Don\u0027t have an account? <b>Sign Up</b></string>
+    <string name="existing_account">Already have an account? <b>Sign In</b></string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="signup_agreement">By continuing, you agree with our <b>Term and Conditions</b> and <b>Privacy Policy</b></string>
     <string name="aggregate_impact_score">Aggregate Impact Score:</string>
     <string name="back">Back</string>
     <string name="description">Description</string>
+    <string name="signup_curator">Curator accounts must end with <b> @impactiocurator.com</b></string>
+    <string name="signup_projectleader">Project Leader accounts must end with <b> @impactiopl.com</b></string>
 </resources>
