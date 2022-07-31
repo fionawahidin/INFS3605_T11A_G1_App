@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/tv_currentTwoTitle"
         android:layout_width="wrap_content"
@@ -87,23 +88,48 @@ threatened species"
         android:layout_height="22dp"
         android:layout_marginTop="8dp"
         android:text="KPI Two"
+=======
+    <EditText
+        android:id="@+id/et_currentKpiOneForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOneForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiOneForm" />
+
+    <TextView
+        android:id="@+id/tv_kpiOneOverview6"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:text="KPI 2"
+>>>>>>> second
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/tv_currentOneOverTitle5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentOneOverTitle5" />
 
     <TextView
-        android:id="@+id/tv_baselineTwoTitle"
+        android:id="@+id/tv_targetOneOverTitle6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="8dp"
         android:text="Baseline"
+=======
+        android:layout_marginTop="48dp"
+        android:text="Target Level :"
+>>>>>>> second
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_targetTwoTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoTitle" />
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneTitle6" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/tv_targetTwoTitle"
         android:layout_width="51dp"
         android:layout_height="23dp"
@@ -133,28 +159,161 @@ threatened species"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/sdg_15" />
-
-    <TextView
-        android:id="@+id/tv_targetOneTitle"
+=======
+        android:id="@+id/tv_sdgTargetOneTitle6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Target"
+        android:layout_marginTop="20dp"
+        android:text="SDG Target:"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_kpiOne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_kpiOne" />
+        app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kpiOneOverview6" />
+>>>>>>> second
+
+    <TextView
+        android:id="@+id/tv_currentOneOverTitle6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Current Level:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineOneOverTitle6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneOverTitle6" />
+
+    <TextView
+        android:id="@+id/tv_targetKpiTwoForm"
+        android:layout_width="264dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwoForm" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetTwoForm"
+        android:layout_width="264dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="28dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle6"
+        app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle6" />
+
+    <TextView
+        android:id="@+id/tv_baseKpiTwoForm"
+        android:layout_width="103dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetKpiTwoForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiTwoForm" />
+
+    <TextView
+        android:id="@+id/tv_baselineOneOverTitle6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Baseline Level:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetOneOverTitle6" />
 
     <TextView
         android:id="@+id/tv_formTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Update Metrics"
+        android:text="Update Form"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_targetKpiOneForm"
+        android:layout_width="264dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneForm" />
+
+    <TextView
+        android:id="@+id/tv_currentOneOverTitle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Current Level:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineOneOverTitle5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneOverTitle5" />
+
+    <TextView
+        android:id="@+id/tv_baselineOneOverTitle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Baseline Level:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetOneOverTitle5" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetOneTitle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SDG Target:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kpiOneOverview5" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetOneForm"
+        android:layout_width="264dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="36dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle5"
+        app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle5" />
+
+    <TextView
+        android:id="@+id/tv_kpiOneOverview5"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="KPI 1"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_targetOneOverTitle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Target Level :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneTitle5" />
+
+    <TextView
+        android:id="@+id/tv_baseKpiOneForm"
+        android:layout_width="103dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetKpiOneForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiOneForm" />
 
     <Button
         android:id="@+id/btn_formSubmit"
@@ -164,12 +323,20 @@ threatened species"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_currentTwo"
         app:layout_constraintVertical_bias="0.087" />
+=======
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent" />
+>>>>>>> second
 
+<<<<<<< Updated upstream
+=======
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/imageView"
         android:layout_width="111dp"
         android:layout_height="107dp"
@@ -201,15 +368,23 @@ management of all types of forests, halt deforestation,
 restore degraded forests and substantially increase
 afforestation and reforestation globally"
         android:textSize="12sp"
+=======
+        android:id="@+id/uploadpdf"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="308dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+>>>>>>> second
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_target"
-        app:layout_constraintTop_toBottomOf="@+id/tv_target" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916"
+        app:srcCompat="@android:drawable/ic_menu_upload" />
 
     <TextView
-        android:id="@+id/tv_targetOne"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginStart="16dp"
         android:text="Aim for 100,000 acres of land restoration"
         app:layout_constraintStart_toEndOf="@+id/tv_targetOneTitle"
@@ -233,20 +408,26 @@ afforestation and reforestation globally"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Baseline"
+=======
+        android:text="Upload Supporting\n Documents (PDF)"
+        app:layout_constraintEnd_toEndOf="@+id/uploadpdf"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="@+id/uploadpdf"
+        app:layout_constraintTop_toBottomOf="@+id/uploadpdf" />
+
+    <EditText
+        android:id="@+id/et_currentKpiTwoForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+>>>>>>> second
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_targetOneTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetOneTitle" />
+        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwoForm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwoForm" />
 
-    <TextView
-        android:id="@+id/tv_baselineOne"
-        android:layout_width="302dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="12dp"
-        android:text=""
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_targetOne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetOne" />
-
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/uploadpdf"
         android:layout_width="60dp"
@@ -269,4 +450,7 @@ afforestation and reforestation globally"
         app:layout_constraintStart_toStartOf="@+id/uploadpdf"
         app:layout_constraintTop_toBottomOf="@+id/uploadpdf" />
 
+=======
+>>>>>>> Stashed changes
+>>>>>>> second
 </androidx.constraintlayout.widget.ConstraintLayout>

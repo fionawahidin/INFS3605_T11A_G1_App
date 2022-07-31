@@ -1,5 +1,7 @@
 package com.example.infs3605_t11a_g1_app;
 
+import android.net.Uri;
+
 public class ProjectLeader {
     private String name;
     private String solutionName;
@@ -13,10 +15,14 @@ public class ProjectLeader {
     private String targetTwo;
     private String currentOne;
     private String currentTwo;
+    private Uri imageuri;
+    private String impactScore;
+    private String baselineAchieve;
 
     public ProjectLeader(String name, String solutionName, String challengeSpin, String desc,
                          String kpiOneSpin, String kpiOne, String kpiTwoSpin, String kpiTwo,
-                         String targetOne, String targetTwo, String currentOne, String currentTwo) {
+                         String targetOne, String targetTwo, String currentOne, String currentTwo,
+                         Uri imageuri, String impactScore, String baselineAchieve) {
         this.name = name;
         this.solutionName = solutionName;
         this.challengeSpin = challengeSpin;
@@ -29,6 +35,9 @@ public class ProjectLeader {
         this.targetTwo = targetTwo;
         this.currentOne = currentOne;
         this.currentTwo = currentTwo;
+        this.imageuri = imageuri;
+        this.impactScore = impactScore;
+        this.baselineAchieve = baselineAchieve;
     }
 
     public ProjectLeader() {
@@ -128,5 +137,29 @@ public class ProjectLeader {
 
     public void setCurrentTwo(String currentTwo) {
         this.currentTwo = currentTwo;
+    }
+
+    public Uri getImageuri() {
+        return imageuri;
+    }
+
+    public void setImageuri(Uri imageuri) {
+        this.imageuri = imageuri;
+    }
+
+    public String getImpactScore() {
+        return impactScore;
+    }
+
+    public void setImpactScore(String impactScore) {
+        this.impactScore = impactScore;
+    }
+
+    public String getBaselineAchieve() {
+        return baselineAchieve;
+    }
+
+    public void setBaselineAchieve(String baselineAchieve) {
+        this.baselineAchieve = baselineAchieve;
     }
 }

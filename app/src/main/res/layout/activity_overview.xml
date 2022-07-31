@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/tv_baseAchieve"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="141dp"
+        android:layout_height="37dp"
         android:layout_marginStart="44dp"
         android:text=""
         android:textColor="#000000"
@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/tv_impact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="111dp"
+        android:layout_height="31dp"
         android:layout_marginStart="36dp"
         android:text=""
         android:textColor="#000000"
