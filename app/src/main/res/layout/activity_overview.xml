@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <CheckBox
+        android:id="@+id/cb_verificationOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verified by Curator"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/tv_baseAchieve"
         android:layout_width="140dp"
@@ -35,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:text="Impact Score:"
         android:textColor="#52C1C9"
         android:textSize="20sp"
@@ -75,6 +84,7 @@
         android:text="Update Project"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
@@ -218,6 +228,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetTwoTitle"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetTwoTitle" />
+
     <TextView
         android:id="@+id/tv_kpiTwoOverview"
         android:layout_width="59dp"

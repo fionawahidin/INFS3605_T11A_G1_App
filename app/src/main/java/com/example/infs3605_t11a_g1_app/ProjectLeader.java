@@ -19,10 +19,12 @@ public class ProjectLeader extends User {
     private String impactScore;
     private String baselineAchieve;
 
+    private boolean checkbox;
+
     public ProjectLeader(String name, String solutionName, String challengeSpin, String desc,
                          String kpiOneSpin, String kpiOne, String kpiTwoSpin, String kpiTwo,
                          String targetOne, String targetTwo, String currentOne, String currentTwo,
-                         Uri imageuri, String impactScore, String baselineAchieve) {
+                         Uri imageuri, String impactScore, String baselineAchieve, boolean checkbox) {
         this.name = name;
         this.solutionName = solutionName;
         this.challengeSpin = challengeSpin;
@@ -38,6 +40,7 @@ public class ProjectLeader extends User {
         this.imageuri = imageuri;
         this.impactScore = impactScore;
         this.baselineAchieve = baselineAchieve;
+        this.checkbox = checkbox;
     }
 
     public ProjectLeader() {
@@ -161,5 +164,13 @@ public class ProjectLeader extends User {
 
     public void setBaselineAchieve(String baselineAchieve) {
         this.baselineAchieve = baselineAchieve;
+    }
+
+    public boolean isCheckbox() {
+        return checkbox;
+    }
+
+    public void setCheckbox(boolean checkbox) {
+        this.checkbox = checkbox;
     }
 }

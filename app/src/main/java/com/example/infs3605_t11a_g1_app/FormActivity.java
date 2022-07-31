@@ -124,7 +124,7 @@ public class FormActivity extends AppCompatActivity {
                         String baseTwo = mBaselineKpiTwo.getText().toString();
 
                         float baseComparisonOne = (Float.valueOf(currentOne) / Float.valueOf(baseOne));
-                        float baseComparisonTwo = (Float.valueOf(currentOne) / Float.valueOf(baseTwo));
+                        float baseComparisonTwo = (Float.valueOf(currentTwo) / Float.valueOf(baseTwo));
 
                         String baselineAchieve = null;
                         if (baseComparisonOne == 1 && baseComparisonTwo == 1) {

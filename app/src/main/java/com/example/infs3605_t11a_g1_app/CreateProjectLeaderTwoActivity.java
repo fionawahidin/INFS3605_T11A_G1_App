@@ -114,6 +114,7 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 projectLeader.setCurrentTwo("0");
                 projectLeader.setImpactScore("0");
                 projectLeader.setBaselineAchieve("N/A");
+                projectLeader.setCheckbox(false);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override

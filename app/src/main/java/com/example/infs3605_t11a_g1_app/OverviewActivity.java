@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -20,8 +21,7 @@ public class OverviewActivity extends AppCompatActivity {
     private TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo,
             mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo,
             mImpactScore, mBaseAchieve;
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ProjectLeader");
+    private CheckBox mCheckbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class OverviewActivity extends AppCompatActivity {
         mCurrentKpiTwo = findViewById(R.id.tv_currentKpiTwo);
         mImpactScore = findViewById(R.id.tv_impact);
         mBaseAchieve = findViewById(R.id.tv_baseAchieve);
+        mCheckbox = findViewById(R.id.cb_verificationOver);
 
         mUpdate = findViewById(R.id.btn_update);
         mUpdate.setOnClickListener(new View.OnClickListener() {
@@ -50,20 +51,21 @@ public class OverviewActivity extends AppCompatActivity {
             }
         });
 
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    String targetOne = ds.child("targetOne").getValue(String.class);
-                    String targetTwo = ds.child("targetTwo").getValue(String.class);
-                    String kpiOne = ds.child("kpiOne").getValue(String.class);
-                    String kpiTwo = ds.child("kpiTwo").getValue(String.class);
-                    String kpiOneSpin = ds.child("kpiOneSpin").getValue(String.class);
-                    String kpiTwoSpin = ds.child("kpiTwoSpin").getValue(String.class);
-                    String currentOne = ds.child("currentOne").getValue(String.class);
-                    String currentTwo = ds.child("currentTwo").getValue(String.class);
-                    String impactScore = ds.child("impactScore").getValue(String.class);
-                    String baselineAchieve = ds.child("baselineAchieve").getValue(String.class);
+                    String targetOne = dataSnapshot.child("targetOne").getValue(String.class);
+                    String targetTwo = dataSnapshot.child("targetTwo").getValue(String.class);
+                    String kpiOne = dataSnapshot.child("kpiOne").getValue(String.class);
+                    String kpiTwo = dataSnapshot.child("kpiTwo").getValue(String.class);
+                    String kpiOneSpin = dataSnapshot.child("kpiOneSpin").getValue(String.class);
+                    String kpiTwoSpin = dataSnapshot.child("kpiTwoSpin").getValue(String.class);
+                    String currentOne = dataSnapshot.child("currentOne").getValue(String.class);
+                    String currentTwo = dataSnapshot.child("currentTwo").getValue(String.class);
+                    String impactScore = dataSnapshot.child("impactScore").getValue(String.class);
+                    String baselineAchieve = dataSnapshot.child("baselineAchieve").getValue(String.class);
+                    boolean checkbox = dataSnapshot.child("checkbox").getValue(Boolean.class);
 
                     mTargetSdgOne.setText(targetOne);
                     mTargetSdgTwo.setText(targetTwo);
@@ -75,8 +77,8 @@ public class OverviewActivity extends AppCompatActivity {
                     mCurrentKpiTwo.setText(currentTwo);
                     mImpactScore.setText(impactScore);
                     mBaseAchieve.setText(baselineAchieve);
+                    mCheckbox.setChecked(checkbox);
                 }
-            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

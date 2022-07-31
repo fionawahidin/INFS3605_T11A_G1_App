@@ -63,7 +63,7 @@ public class CuratorSelectActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         databaseReference.child(mAuth.getCurrentUser().getUid()).setValue(curator);
-                        startActivity(new Intent(CuratorSelectActivity.this, MainActivity.class));
+                        startActivity(new Intent(CuratorSelectActivity.this, CuratorVerificationActivity.class));
                     }
 
                     @Override
