@@ -2,7 +2,7 @@ package com.example.infs3605_t11a_g1_app;
 
 import android.net.Uri;
 
-public class ProjectLeader {
+public class ProjectLeader extends User {
     private String name;
     private String solutionName;
     private String challengeSpin;

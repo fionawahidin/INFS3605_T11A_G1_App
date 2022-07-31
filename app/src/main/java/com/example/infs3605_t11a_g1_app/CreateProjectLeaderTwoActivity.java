@@ -1,6 +1,6 @@
 package com.example.infs3605_t11a_g1_app;
-
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,20 +23,15 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
     private EditText mBaselineOne, mBaselineTwo;
     private Spinner mKpiSpinnerOne, mKpiSpinnerTwo, mTargetSpinnerOne, mTargetSpinnerTwo;
     private Button mSubmit;
-
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ProjectLeader");
     ProjectLeader projectLeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createprojectleadertwo);
-
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("ProjectLeader");
         projectLeader = new ProjectLeader();
-
         mBaselineOne = findViewById(R.id.et_baselinekpiOne);
         mBaselineTwo = findViewById(R.id.et_baselinekpiTwo);
         mKpiSpinnerOne = findViewById(R.id.sp_kpisOne);
@@ -57,7 +52,6 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 "300 land manager adopt nature-based solutions", "150 regional jobs created"};
         ArrayAdapter<String> kpisAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, kpisTwo);
         kpiDropdownTwo.setAdapter(kpisAdapterTwo);
-
         Spinner targetDropDownOne = findViewById(R.id.sp_targetsOne);
         String[] targetsOne = new String[]{"15.1: Ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems",
                 "15.2: Promote the implementation of sustainable management of all types of forests",
@@ -70,7 +64,6 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 "15.9: Integrate ecosystem and biodiversity values into national and local planning"};
         ArrayAdapter<String> targetsAdapterOne = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targetsOne);
         targetDropDownOne.setAdapter(targetsAdapterOne);
-
         Spinner targetDropDownTwo = findViewById(R.id.sp_targetsTwo);
         String[] targetsTwo = new String[]{"15.1: Ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems",
                 "15.2: Promote the implementation of sustainable management of all types of forests",
@@ -81,9 +74,9 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 "15.7: Take urgent action to end poaching and trafficking of protected species of flora and fauna",
                 "15.8: Introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species",
                 "15.9: Integrate ecosystem and biodiversity values into national and local planning"};
+
         ArrayAdapter<String> targetsAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targetsTwo);
         targetDropDownTwo.setAdapter(targetsAdapterTwo);
-
         mSubmit = findViewById(R.id.btn_submit);
         mSubmit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -93,7 +86,6 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 String targetTwo = mTargetSpinnerTwo.getSelectedItem().toString();
                 String kpiTwo = mKpiSpinnerTwo.getSelectedItem().toString();
                 String baselineTwo = mBaselineTwo.getText().toString();
-
                 if (TextUtils.isEmpty(targetOne) || TextUtils.isEmpty(kpiOne) || TextUtils.isEmpty(baselineOne) ||
                         TextUtils.isEmpty(targetTwo) || TextUtils.isEmpty(kpiTwo) || TextUtils.isEmpty(baselineTwo)) {
                     Toast.makeText(CreateProjectLeaderTwoActivity.this, "Please enter all fields.", Toast.LENGTH_SHORT).show();
@@ -101,11 +93,9 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                     addToData(targetOne, kpiOne, baselineOne, targetTwo, kpiTwo, baselineTwo);
                 }
             }
-
             private void addToData(String targetOne, String kpiOne, String baselineOne,
                                    String targetTwo, String kpiTwo, String baselineTwo) {
                 Intent nextIntent = getIntent();
-
                 String name = nextIntent.getStringExtra("Name");
                 projectLeader.setName(name);
                 String solutionName = nextIntent.getStringExtra("SolutionName");
@@ -125,11 +115,10 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 projectLeader.setImpactScore("0");
                 projectLeader.setBaselineAchieve("N/A");
 
-
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        databaseReference.setValue(projectLeader);
+                        databaseReference.child(mAuth.getCurrentUser().getUid()).setValue(projectLeader);
                         startActivity(new Intent(CreateProjectLeaderTwoActivity.this, OverviewActivity.class));
                     }
 

@@ -28,7 +28,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tv_impactTitle"
         app:layout_constraintStart_toEndOf="@+id/tv_impactTitle" />
-
     <TextView
         android:id="@+id/tv_baseAchieveTitle"
         android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_impactTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_impactTitle" />
-
     <TextView
         android:id="@+id/tv_impactTitle"
         android:layout_width="wrap_content"
@@ -53,7 +51,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_overviewTitle"
         android:layout_width="wrap_content"
@@ -65,7 +62,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btn_update"
         android:layout_width="wrap_content"
@@ -74,49 +70,44 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_currentKpiTwo"
-        app:layout_constraintVertical_bias="0.141" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
     <TextView
         android:id="@+id/tv_sdgTargetOne"
         android:layout_width="264dp"
         android:layout_height="57dp"
         android:layout_marginStart="29dp"
-        android:text="TextView"
+        android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle" />
-
     <TextView
         android:id="@+id/tv_targetTwoOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:text="Target Level"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwoTitle" />
-
     <TextView
         android:id="@+id/tv_currentOneOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="Current Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineOneOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneOverTitle" />
-
     <TextView
         android:id="@+id/tv_currentKpiOne"
         android:layout_width="104dp"
         android:layout_height="22dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOne"
         app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiOne" />
-
     <TextView
         android:id="@+id/tv_sdgTargetOneTitle"
         android:layout_width="wrap_content"
@@ -126,90 +117,82 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview"
         app:layout_constraintTop_toBottomOf="@+id/tv_kpiOneOverview" />
-
     <TextView
         android:id="@+id/tv_targetOneOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="56dp"
         android:text="Target Level :"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneTitle" />
-
     <TextView
         android:id="@+id/tv_targetKpiOne"
         android:layout_width="264dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOne"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOne" />
-
     <TextView
         android:id="@+id/tv_currentTwoOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="Current Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineTwoOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwoOverTitle" />
-
     <TextView
         android:id="@+id/tv_currentKpiTwo"
-        android:layout_width="111dp"
-        android:layout_height="23dp"
+        android:layout_width="106dp"
+        android:layout_height="28dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_baselineTwoOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwo" />
-
     <TextView
         android:id="@+id/tv_baseKpiOne"
         android:layout_width="103dp"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_baselineOneOverTitle"
-        app:layout_constraintTop_toTopOf="@+id/tv_baselineOneOverTitle" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiOne" />
     <TextView
         android:id="@+id/tv_sdgTargetTwo"
         android:layout_width="245dp"
         android:layout_height="55dp"
         android:layout_marginStart="28dp"
-        android:text="TextView"
+        android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetTwoTitle"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetTwoTitle" />
-
     <TextView
         android:id="@+id/tv_kpiTwoOverview"
         android:layout_width="59dp"
         android:layout_height="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="KPI 2"
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_currentOneOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_currentOneOverTitle" />
-
     <TextView
         android:id="@+id/tv_baseKpiTwo"
-        android:layout_width="110dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
         android:text=""
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_baselineTwoOverTitle"
-        app:layout_constraintTop_toTopOf="@+id/tv_baselineTwoOverTitle" />
-
+        app:layout_constraintStart_toStartOf="@+id/tv_targetKpiTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiTwo" />
     <TextView
         android:id="@+id/tv_kpiOneOverview"
         android:layout_width="59dp"
@@ -221,7 +204,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_baseAchieveTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_baseAchieveTitle" />
-
     <TextView
         android:id="@+id/tv_sdgTargetTwoTitle"
         android:layout_width="wrap_content"
@@ -231,35 +213,31 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiTwoOverview"
         app:layout_constraintTop_toBottomOf="@+id/tv_kpiTwoOverview" />
-
     <TextView
         android:id="@+id/tv_targetKpiTwo"
         android:layout_width="245dp"
         android:layout_height="55dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwo"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwo" />
-
     <TextView
         android:id="@+id/tv_baselineOneOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:text="Baseline Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_targetOneOverTitle" />
-
     <TextView
         android:id="@+id/tv_baselineTwoOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:text="Baseline Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetTwoOverTitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoOverTitle" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

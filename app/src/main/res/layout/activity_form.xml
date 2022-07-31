@@ -5,90 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
-    <TextView
-        android:id="@+id/tv_currentTwoTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Current"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineTwoTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwoTitle" />
-
-    <TextView
-        android:id="@+id/tv_currentOneTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Current"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineOneTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneTitle" />
-
-    <TextView
-        android:id="@+id/tv_baselineTwo"
-        android:layout_width="302dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
-        android:text=""
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_targetTwo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwo" />
-
-    <EditText
-        android:id="@+id/et_currentTwo"
-        android:layout_width="307dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineTwo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwo" />
-
-    <EditText
-        android:id="@+id/et_currentOne"
-        android:layout_width="307dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselineOne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOne" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="260dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="4dp"
-        android:text="Take urgent and significant action to reduce the
-degradation of natural habitats, halt the loss of biodiversity
-and, by 2020, protect and prevent the extinction of
-threatened species"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_target2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_target2" />
-
-    <TextView
-        android:id="@+id/tv_targetTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="Ensure 10+ species are on a recovery path"
-        app:layout_constraintStart_toEndOf="@+id/tv_targetTwoTitle"
-        app:layout_constraintTop_toTopOf="@+id/tv_targetTwoTitle" />
-
-    <TextView
-        android:id="@+id/tv_kpiTwo"
-        android:layout_width="62dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
-        android:text="KPI Two"
-=======
     <EditText
         android:id="@+id/et_currentKpiOneForm"
         android:layout_width="wrap_content"
@@ -106,7 +22,6 @@ threatened species"
         android:layout_height="24dp"
         android:layout_marginTop="36dp"
         android:text="KPI 2"
->>>>>>> second
         android:textColor="#70D0D8"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -117,49 +32,13 @@ threatened species"
         android:id="@+id/tv_targetOneOverTitle6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="8dp"
-        android:text="Baseline"
-=======
         android:layout_marginTop="48dp"
         android:text="Target Level :"
->>>>>>> second
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle6"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneTitle6" />
 
     <TextView
-<<<<<<< HEAD
-        android:id="@+id/tv_targetTwoTitle"
-        android:layout_width="51dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:text="Target"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_kpiTwo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_kpiTwo" />
-
-    <TextView
-        android:id="@+id/tv_target2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Target 15.5"
-        android:textColor="#52C1C9"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="111dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="156dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/sdg_15" />
-=======
         android:id="@+id/tv_sdgTargetOneTitle6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,7 +47,6 @@ threatened species"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview6"
         app:layout_constraintTop_toBottomOf="@+id/tv_kpiOneOverview6" />
->>>>>>> second
 
     <TextView
         android:id="@+id/tv_currentOneOverTitle6"
@@ -323,58 +201,15 @@ threatened species"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_currentTwo"
-        app:layout_constraintVertical_bias="0.087" />
-=======
         app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent" />
->>>>>>> second
 
-<<<<<<< Updated upstream
-=======
     <ImageView
-<<<<<<< HEAD
-        android:id="@+id/imageView"
-        android:layout_width="111dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_formTitle"
-        app:srcCompat="@drawable/sdg_15" />
-
-    <TextView
-        android:id="@+id/tv_target"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Target 15.2"
-        android:textColor="#52C1C9"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="260dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="8dp"
-        android:text="By 2020, promote the implementation of sustainable
-management of all types of forests, halt deforestation,
-restore degraded forests and substantially increase
-afforestation and reforestation globally"
-        android:textSize="12sp"
-=======
         android:id="@+id/uploadpdf"
         android:layout_width="60dp"
         android:layout_height="57dp"
         android:layout_marginEnd="308dp"
         app:layout_constraintBottom_toBottomOf="parent"
->>>>>>> second
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.916"
@@ -384,31 +219,6 @@ afforestation and reforestation globally"
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginStart="16dp"
-        android:text="Aim for 100,000 acres of land restoration"
-        app:layout_constraintStart_toEndOf="@+id/tv_targetOneTitle"
-        app:layout_constraintTop_toTopOf="@+id/tv_targetOneTitle" />
-
-    <TextView
-        android:id="@+id/tv_kpiOne"
-        android:layout_width="59dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
-        android:text="KPI One"
-        android:textColor="#70D0D8"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/tv_baselineOneTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Baseline"
-=======
         android:text="Upload Supporting\n Documents (PDF)"
         app:layout_constraintEnd_toEndOf="@+id/uploadpdf"
         app:layout_constraintHorizontal_bias="0.543"
@@ -422,35 +232,7 @@ afforestation and reforestation globally"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
->>>>>>> second
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwoForm"
         app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwoForm" />
-
-<<<<<<< HEAD
-    <ImageView
-        android:id="@+id/uploadpdf"
-        android:layout_width="60dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
-        app:layout_constraintStart_toEndOf="@+id/btn_formSubmit"
-        app:layout_constraintTop_toBottomOf="@+id/et_currentTwo"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_upload" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upload Supporting\n Documents (PDF)"
-        app:layout_constraintEnd_toEndOf="@+id/uploadpdf"
-        app:layout_constraintStart_toStartOf="@+id/uploadpdf"
-        app:layout_constraintTop_toBottomOf="@+id/uploadpdf" />
-
-=======
->>>>>>> Stashed changes
->>>>>>> second
 </androidx.constraintlayout.widget.ConstraintLayout>
