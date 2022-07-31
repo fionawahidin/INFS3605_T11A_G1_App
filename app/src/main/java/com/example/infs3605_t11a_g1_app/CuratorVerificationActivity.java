@@ -29,7 +29,7 @@ public class CuratorVerificationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_createcurator);
+        setContentView(R.layout.activity_curatorverification);
 
         mTargetSdgOne = findViewById(R.id.tv_sdgTargetOneVerify);
         mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwoVerify);

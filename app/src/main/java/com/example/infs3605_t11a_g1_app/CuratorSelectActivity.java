@@ -49,16 +49,24 @@ public class CuratorSelectActivity extends AppCompatActivity {
                 String curatorName = mCuratorName.getText().toString();
                 String curatorChallenge = mCuratorChallenges.getSelectedItem().toString();
                 String curatorReason = mReason.getText().toString();
+
                 if (TextUtils.isEmpty(curatorName) || TextUtils.isEmpty(curatorChallenge) || TextUtils.isEmpty(curatorReason)) {
                     Toast.makeText(CuratorSelectActivity.this, "Please enter all fields.", Toast.LENGTH_SHORT).show();
                 } else {
                     addCurator(curatorName, curatorChallenge, curatorReason);
                 }
             }
+
+//        } else {
+//            addToData(targetOne, kpiOne, baselineOne, targetTwo, kpiTwo, baselineTwo);
+//        }
+//    }
+
             private void addCurator(String curatorName, String curatorChallenge, String curatorReason) {
                 curator.setCuratorName(curatorName);
                 curator.setCuratorChallenge(curatorChallenge);
-                curator.setCuratorName(curatorReason);
+                curator.setReason(curatorReason);
+
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

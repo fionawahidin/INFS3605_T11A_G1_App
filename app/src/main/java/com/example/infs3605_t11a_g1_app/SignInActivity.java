@@ -94,7 +94,7 @@ public class SignInActivity extends AppCompatActivity {
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().endsWith("impactiocurator.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                    startActivity(new Intent(SignInActivity.this, CuratorVerificationActivity.class));
                 }
 
                 else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().endsWith("impactiopl.com")) {
