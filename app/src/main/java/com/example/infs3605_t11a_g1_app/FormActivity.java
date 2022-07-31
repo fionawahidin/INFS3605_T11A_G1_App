@@ -48,6 +48,7 @@ public class FormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_form);
+        getSupportActionBar().hide();
 
         mTargetSdgOne = findViewById(R.id.tv_sdgTargetOneForm);
         mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwoForm);

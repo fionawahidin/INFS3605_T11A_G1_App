@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/et_currentKpiOneForm"
@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_currentOneOverTitle5"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOneForm" />
@@ -20,9 +21,10 @@
         android:layout_width="59dp"
         android:layout_height="24dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
         android:text="KPI 2"
         android:textColor="#70D0D8"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_currentOneOverTitle5"
         app:layout_constraintTop_toBottomOf="@+id/tv_currentOneOverTitle5" />
@@ -32,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Target Level :"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle6"
@@ -42,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
         android:text="SDG Target:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview6"
@@ -52,6 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Current Level:"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/et_currentKpiTwoForm"
@@ -61,9 +66,10 @@
 
     <TextView
         android:id="@+id/tv_targetKpiTwoForm"
-        android:layout_width="264dp"
-        android:layout_height="53dp"
+        android:layout_width="265dp"
+        android:layout_height="23dp"
         android:text=""
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoForm"
         app:layout_constraintTop_toTopOf="@+id/tv_targetOneOverTitle6" />
@@ -73,6 +79,7 @@
         android:layout_width="264dp"
         android:layout_height="57dp"
         android:text="TextView"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/et_currentKpiOneForm"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle6" />
@@ -83,6 +90,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
         android:text=""
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_baselineOneOverTitle6"
         app:layout_constraintStart_toStartOf="@+id/tv_targetKpiTwoForm"
@@ -92,7 +100,8 @@
         android:id="@+id/tv_baselineOneOverTitle6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Baseline Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle6"
@@ -103,8 +112,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Update Form"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +126,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
         android:text=""
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneForm"
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneForm" />
@@ -124,7 +135,8 @@
         android:id="@+id/tv_currentOneOverTitle5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Current Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineOneOverTitle5"
@@ -134,6 +146,7 @@
         android:id="@+id/tv_baselineOneOverTitle5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="Baseline Level:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle5"
@@ -144,6 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
         android:text="SDG Target:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview5"
@@ -155,6 +169,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="36dp"
         android:text="TextView"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle5"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle5" />
@@ -164,10 +179,11 @@
         android:layout_width="59dp"
         android:layout_height="24dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
         android:text="KPI 1"
         android:textColor="#70D0D8"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -176,6 +192,7 @@
         android:id="@+id/tv_targetOneOverTitle5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="Target Level :"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle5"
@@ -185,32 +202,33 @@
         android:id="@+id/tv_baseKpiOneForm"
         android:layout_width="103dp"
         android:layout_height="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text=""
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_targetKpiOneForm"
         app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiOneForm" />
 
     <Button
         android:id="@+id/btn_formSubmit"
-        android:layout_width="336dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="334dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/uploadpdf"
         android:layout_width="60dp"
         android:layout_height="57dp"
-        android:layout_marginEnd="288dp"
+        android:layout_marginEnd="176dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentOneOverTitle6"
+        app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@android:drawable/ic_menu_upload" />
 
     <TextView
@@ -219,7 +237,7 @@
         android:layout_height="wrap_content"
         android:text="Upload Supporting\n Documents (PDF)"
         app:layout_constraintEnd_toEndOf="@+id/uploadpdf"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="@+id/uploadpdf"
         app:layout_constraintTop_toBottomOf="@+id/uploadpdf" />
 
@@ -230,6 +248,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_currentOneOverTitle6"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwoForm"

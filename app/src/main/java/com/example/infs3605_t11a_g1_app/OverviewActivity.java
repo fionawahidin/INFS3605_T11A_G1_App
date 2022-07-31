@@ -32,6 +32,7 @@ public class OverviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_overview);
+        getSupportActionBar().hide();
 
         mTargetSdgOne = findViewById(R.id.tv_sdgTargetOne);
         mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwo);
