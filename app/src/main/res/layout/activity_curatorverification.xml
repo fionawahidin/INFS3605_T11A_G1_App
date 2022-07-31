@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_baseAchieveVerify"
+        android:layout_width="140dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_baseAchieveTitle"
+        app:layout_constraintStart_toEndOf="@+id/tv_baseAchieveTitle" />
+
+    <TextView
+        android:id="@+id/tv_impactVerify"
+        android:layout_width="110dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_impactTitle"
+        app:layout_constraintStart_toEndOf="@+id/tv_impactTitle" />
+
+    <TextView
+        android:id="@+id/tv_impactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="52dp"
+        android:text="Impact Score:"
+        android:textColor="#52C1C9"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_baseAchieveTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Baseline Achieved?"
+        android:textColor="#52C1C9"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_impactTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_impactTitle" />
+
+    <TextView
+        android:id="@+id/tv_overviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Impact Overview"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetOneVerify"
+        android:layout_width="264dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="29dp"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetOneTitle" />
+
+    <TextView
+        android:id="@+id/tv_targetTwoOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Target Level"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwoTitle" />
+
+    <TextView
+        android:id="@+id/tv_currentKpiOneVerify"
+        android:layout_width="104dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOneVerify"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiOneVerify" />
+
+    <TextView
+        android:id="@+id/tv_baselineOneOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Baseline Level:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetOneOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetOneOverTitle" />
+
+    <TextView
+        android:id="@+id/tv_baseKpiOneVerify"
+        android:layout_width="103dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_baselineOneOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiOneVerify" />
+
+    <TextView
+        android:id="@+id/tv_currentOneOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Current Level:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineOneOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineOneOverTitle" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetOneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SDG Target:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_kpiOneOverview"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kpiOneOverview" />
+
+    <TextView
+        android:id="@+id/tv_targetOneOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Target Level :"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneTitle" />
+
+    <TextView
+        android:id="@+id/tv_targetKpiOneVerify"
+        android:layout_width="264dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneVerify"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetOneVerify" />
+
+    <TextView
+        android:id="@+id/tv_currentTwoOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Current Level:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_baselineTwoOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwoOverTitle" />
+
+    <TextView
+        android:id="@+id/tv_currentKpiTwoVerify"
+        android:layout_width="106dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwoVerify"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwoVerify" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetTwoVerify"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetTwoTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetTwoTitle" />
+    <TextView
+        android:id="@+id/tv_kpiTwoOverview"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:text="KPI 2"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentOneOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentOneOverTitle" />
+
+    <TextView
+        android:id="@+id/tv_baseKpiTwoVerify"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_baselineTwoOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiTwoVerify" />
+
+    <TextView
+        android:id="@+id/tv_kpiOneOverview"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:text="KPI 1"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_baseAchieveTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseAchieveTitle" />
+
+    <TextView
+        android:id="@+id/tv_sdgTargetTwoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="SDG Target:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_kpiTwoOverview"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kpiTwoOverview" />
+
+    <TextView
+        android:id="@+id/tv_targetKpiTwoVerify"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoVerify"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwoVerify" />
+
+    <TextView
+        android:id="@+id/tv_baselineTwoOverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baseline Level:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_baseKpiTwoVerify"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetTwoOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoOverTitle"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <CheckBox
+        android:id="@+id/cb_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Verified by Curator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

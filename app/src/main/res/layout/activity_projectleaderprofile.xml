@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_solutionNameProfile"
+        android:layout_width="335dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_namePL"
+        app:layout_constraintTop_toBottomOf="@+id/tv_namePL" />
+
+    <TextView
+        android:id="@+id/tv_descProfile"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_solutionNameProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_solutionNameProfile" />
+
+    <TextView
+        android:id="@+id/tv_completeLevel"
+        android:layout_width="335dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_descProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descProfile" />
+
+    <TextView
+        android:id="@+id/tv_nextLevel"
+        android:layout_width="337dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_completeLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tv_completeLevel" />
+
+    <TextView
+        android:id="@+id/tv_levelPL"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text=""
+        android:textColor="#70D0D8"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_namePL"
+        android:layout_width="113dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_projectLeaderProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Project Leader Profile"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

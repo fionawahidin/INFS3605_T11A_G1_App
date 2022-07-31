@@ -104,7 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                         "Successfully signed up!", Toast.LENGTH_SHORT)
                                                         .show();
                                                 if (curatorSelect.isChecked()) {
-                                                    startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
+                                                    startActivity(new Intent(SignUpActivity.this, CuratorSelectActivity.class));
 
                                                 } else if (projectLeaderSelect.isChecked()){
                                                     startActivity(new Intent(SignUpActivity.this, CreateProjectLeaderActivity.class));

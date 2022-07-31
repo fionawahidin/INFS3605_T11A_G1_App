@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_challengesTitle2"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Select a Challenge:"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sp_curatorChallenges"
+        app:layout_constraintTop_toBottomOf="@+id/sp_curatorChallenges" />
+
+    <TextView
+        android:id="@+id/tv_challengesTitle"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Select a Challenge:"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/et_curatorName"
+        app:layout_constraintTop_toBottomOf="@+id/et_curatorName" />
+
+    <TextView
+        android:id="@+id/tv_curatorNameTitle"
+        android:layout_width="324dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Name?"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_createCuratorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Impact Overview"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_curatorName"
+        android:layout_width="377dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/tv_curatorNameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_curatorNameTitle" />
+
+    <Spinner
+        android:id="@+id/sp_curatorChallenges"
+        android:layout_width="371dp"
+        android:layout_height="31dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <EditText
+        android:id="@+id/et_curatorReason"
+        android:layout_width="377dp"
+        android:layout_height="86dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/tv_challengesTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_challengesTitle2" />
+
+    <Button
+        android:id="@+id/btn_curatorSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

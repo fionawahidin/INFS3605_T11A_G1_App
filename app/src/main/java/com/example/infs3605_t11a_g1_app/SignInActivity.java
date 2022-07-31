@@ -99,7 +99,7 @@ public class SignInActivity extends AppCompatActivity {
 
                 else if (task.isSuccessful() && mAuth.getCurrentUser().getEmail().endsWith("impactiopl.com")) {
                     Toast.makeText(SignInActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SignInActivity.this, OverviewActivity.class));
+                    startActivity(new Intent(SignInActivity.this, ProjectLeaderProfileActivity.class));
                 }
 
                 else {

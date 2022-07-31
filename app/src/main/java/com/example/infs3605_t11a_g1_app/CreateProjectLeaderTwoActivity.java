@@ -74,9 +74,9 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 "15.7: Take urgent action to end poaching and trafficking of protected species of flora and fauna",
                 "15.8: Introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species",
                 "15.9: Integrate ecosystem and biodiversity values into national and local planning"};
-
         ArrayAdapter<String> targetsAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targetsTwo);
         targetDropDownTwo.setAdapter(targetsAdapterTwo);
+
         mSubmit = findViewById(R.id.btn_submit);
         mSubmit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
