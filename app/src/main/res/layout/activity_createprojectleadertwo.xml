@@ -23,6 +23,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@+id/tv_baselinesec"
         app:layout_constraintTop_toBottomOf="@+id/tv_baselinesec" />
+
     <EditText
         android:id="@+id/et_baselinekpiTwo"
         android:layout_width="360dp"
@@ -32,6 +33,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="number"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineone2"
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineone2" />
 
@@ -101,6 +103,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="number"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/tv_baselineone"
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineone" />
 
