@@ -33,6 +33,8 @@ public class CuratorSelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createcurator);
 
+        curator = new Curator();
+
         mCuratorName = findViewById(R.id.et_curatorName);
         mReason = findViewById(R.id.et_curatorReason);
 

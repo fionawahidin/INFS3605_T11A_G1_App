@@ -17,10 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class OverviewActivity extends AppCompatActivity {
-    private Button mUpdate;
+    private Button mUpdate, mStats;
     private TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo,
             mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo,
-            mImpactScore, mBaseAchieve;
+            mImpactScore, mBaseAchieve, mLink;
     private CheckBox mCheckbox;
 
     @Override
@@ -41,6 +41,16 @@ public class OverviewActivity extends AppCompatActivity {
         mImpactScore = findViewById(R.id.tv_impact);
         mBaseAchieve = findViewById(R.id.tv_baseAchieve);
         mCheckbox = findViewById(R.id.cb_verificationOver);
+        mLink = findViewById(R.id.tv_linkForm);
+
+        mStats = findViewById(R.id.btn_profile);
+        mStats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ProjectLeaderProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mUpdate = findViewById(R.id.btn_update);
         mUpdate.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +75,7 @@ public class OverviewActivity extends AppCompatActivity {
                     String currentTwo = dataSnapshot.child("currentTwo").getValue(String.class);
                     String impactScore = dataSnapshot.child("impactScore").getValue(String.class);
                     String baselineAchieve = dataSnapshot.child("baselineAchieve").getValue(String.class);
-                    boolean checkbox = dataSnapshot.child("checkbox").getValue(Boolean.class);
+                    String link = dataSnapshot.child("link").getValue(String.class);
 
                     mTargetSdgOne.setText(targetOne);
                     mTargetSdgTwo.setText(targetTwo);
@@ -77,7 +87,8 @@ public class OverviewActivity extends AppCompatActivity {
                     mCurrentKpiTwo.setText(currentTwo);
                     mImpactScore.setText(impactScore);
                     mBaseAchieve.setText(baselineAchieve);
-                    mCheckbox.setChecked(checkbox);
+                    mCheckbox.setChecked(true);
+                    mLink.setText(link);
                 }
 
             @Override

@@ -1,14 +1,19 @@
 package com.example.infs3605_t11a_g1_app;
 
 public class Curator extends User {
-    String curatorName;
-    String curatorChallenge;
-    String reason;
 
     public Curator(String curatorName, String curatorChallenge, String reason) {
         this.curatorName = curatorName;
         this.curatorChallenge = curatorChallenge;
         this.reason = reason;
+    }
+
+    String curatorName;
+    String curatorChallenge;
+    String reason;
+
+    public Curator() {
+
     }
 
     public String getCuratorName() {

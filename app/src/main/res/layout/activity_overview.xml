@@ -5,26 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tv_currentKpiOne"
+        android:layout_width="107dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwo" />
+
     <CheckBox
         android:id="@+id/cb_verificationOver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Verified by Curator"
         android:enabled="false"
+        android:text="Verified by Curator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/tv_linkForm"
+        android:layout_width="269dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:inputType="textMultiLine"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentKpiOne"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentKpiOne" />
+
+    <TextView
+        android:id="@+id/tv_kpiTwoOverview3"
+        android:layout_width="101dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:text="Link to Evidence"
+        android:textColor="#70D0D8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentTwoOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentTwoOverTitle" />
+
+    <TextView
         android:id="@+id/tv_baseAchieve"
-        android:layout_width="140dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="171dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_baseAchieveTitle"
-        app:layout_constraintStart_toEndOf="@+id/tv_baseAchieveTitle" />
+        app:layout_constraintStart_toEndOf="@+id/tv_baseAchieveTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_baseAchieveTitle" />
 
     <TextView
         android:id="@+id/tv_impact"
@@ -44,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="60dp"
         android:text="Impact Score:"
         android:textColor="#52C1C9"
         android:textSize="20sp"
@@ -56,7 +91,7 @@
         android:id="@+id/tv_baseAchieveTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="Baseline Achieved?"
         android:textColor="#52C1C9"
         android:textSize="20sp"
@@ -73,7 +108,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,10 +119,10 @@
         android:text="Update Project"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_sdgTargetOne"
@@ -114,17 +149,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_sdgTargetTwoTitle" />
 
     <TextView
-        android:id="@+id/tv_currentKpiOne"
-        android:layout_width="104dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="12dp"
-        android:text=""
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiOne" />
-
-    <TextView
         android:id="@+id/tv_baselineOneOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,12 +164,11 @@
         android:id="@+id/tv_baseKpiOne"
         android:layout_width="103dp"
         android:layout_height="25dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_baselineOneOverTitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_targetKpiOne"
         app:layout_constraintTop_toBottomOf="@+id/tv_targetKpiOne" />
 
     <TextView
@@ -199,7 +222,7 @@
         android:id="@+id/tv_currentTwoOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Current Level:"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -211,12 +234,13 @@
         android:id="@+id/tv_currentKpiTwo"
         android:layout_width="106dp"
         android:layout_height="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwo" />
+        app:layout_constraintStart_toEndOf="@+id/tv_baselineOneOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiOne" />
 
     <TextView
         android:id="@+id/tv_sdgTargetTwo"
@@ -233,7 +257,7 @@
         android:id="@+id/tv_kpiTwoOverview"
         android:layout_width="59dp"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="KPI 2"
         android:textColor="#70D0D8"
         android:textSize="16sp"
@@ -244,9 +268,9 @@
     <TextView
         android:id="@+id/tv_baseKpiTwo"
         android:layout_width="109dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
@@ -281,7 +305,7 @@
         android:id="@+id/tv_targetKpiTwo"
         android:layout_width="245dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
@@ -292,12 +316,21 @@
         android:id="@+id/tv_baselineTwoOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Baseline Level:"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_baseKpiTwo"
         app:layout_constraintStart_toStartOf="@+id/tv_targetTwoOverTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoOverTitle"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_targetTwoOverTitle" />
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="STATS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

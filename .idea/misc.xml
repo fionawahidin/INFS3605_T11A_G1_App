@@ -34,21 +34,23 @@
         <entry key="app/src/main/res/layout/activity_createcurator.xml" value="0.29126129150390623" />
         <entry key="app/src/main/res/layout/activity_createform.xml" value="0.30185185185185187" />
         <entry key="app/src/main/res/layout/activity_createprojectleader.xml" value="0.27128753662109373" />
-        <entry key="app/src/main/res/layout/activity_createprojectleadertwo.xml" value="0.2471847534179688" />
+        <entry key="app/src/main/res/layout/activity_createprojectleadertwo.xml" value="0.39450378417968757" />
         <entry key="app/src/main/res/layout/activity_curatorselect.xml" value="0.2472686767578125" />
-        <entry key="app/src/main/res/layout/activity_curatorverification.xml" value="0.21556854248046875" />
+        <entry key="app/src/main/res/layout/activity_curatorverification.xml" value="0.38089752197265625" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_form.xml" value="0.20552520751953124" />
+        <entry key="app/src/main/res/layout/activity_form.xml" value="0.29134521484375003" />
         <entry key="app/src/main/res/layout/activity_form1.xml" value="0.4814015706380208" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.267108154296875" />
-        <entry key="app/src/main/res/layout/activity_overview.xml" value="0.3903915405273438" />
+        <entry key="app/src/main/res/layout/activity_overview.xml" value="0.284698486328125" />
         <entry key="app/src/main/res/layout/activity_projectleaderprofile.xml" value="0.38584289550781253" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_verification.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialog_sign_up.xml" value="0.20260416666666667" />
         <entry key="app/src/main/res/layout/solution_list_view.xml" value="0.47700398763020835" />
+        <entry key="app/src/main/res/layout/updateform.xml" value="0.3376205444335938" />
       </map>
     </option>
   </component>

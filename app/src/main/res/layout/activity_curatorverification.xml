@@ -3,19 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_targetKpiTwoVerify2"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:text="https://drive.google.com/drive/folders/1CoZghPnAYWHmPyxufB_iqZZLF23Z-rWa"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_currentTwoOverTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentKpiTwoVerify" />
+
+    <TextView
+        android:id="@+id/tv_currentTwoOverTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Link to Evidence"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentTwoOverTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentTwoOverTitle" />
 
     <TextView
         android:id="@+id/tv_baseAchieveVerify"
-        android:layout_width="140dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="20dp"
-        android:text=""
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:text="Baseline Not Reached"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_baseAchieveTitle"
-        app:layout_constraintStart_toEndOf="@+id/tv_baseAchieveTitle" />
+        app:layout_constraintStart_toEndOf="@+id/tv_baseAchieveTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_baseAchieveTitle" />
 
     <TextView
         android:id="@+id/tv_impactVerify"
@@ -23,7 +46,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="68dp"
         android:layout_marginBottom="4dp"
-        android:text=""
+        android:text="20.0"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -60,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Impact Overview"
+        android:text="Verify Project"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +97,7 @@
         android:layout_height="57dp"
         android:layout_marginStart="29dp"
         android:fontFamily="sans-serif"
-        android:text=""
+        android:text="15.8: Prevent impact of invasive alien species"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetOneTitle"
@@ -97,7 +120,7 @@
         android:layout_width="104dp"
         android:layout_height="22dp"
         android:layout_marginTop="12dp"
-        android:text=""
+        android:text="1"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiOneVerify"
@@ -107,7 +130,7 @@
         android:id="@+id/tv_baselineOneOverTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:text="Baseline Level:"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -121,7 +144,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:text=""
+        android:text="2"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_baselineOneOverTitle"
@@ -168,7 +191,7 @@
         android:layout_width="264dp"
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="10+ flagship species on recovery path"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetOneVerify"
@@ -191,7 +214,7 @@
         android:layout_width="106dp"
         android:layout_height="28dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="30000"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwoVerify"
@@ -202,16 +225,17 @@
         android:layout_width="245dp"
         android:layout_height="55dp"
         android:layout_marginStart="28dp"
-        android:text=""
+        android:text="15.3: Combat restore degraded land"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_sdgTargetTwoTitle"
         app:layout_constraintTop_toTopOf="@+id/tv_sdgTargetTwoTitle" />
+
     <TextView
         android:id="@+id/tv_kpiTwoOverview"
         android:layout_width="59dp"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="KPI 2"
         android:textColor="#70D0D8"
         android:textSize="16sp"
@@ -224,8 +248,8 @@
         android:layout_width="109dp"
         android:layout_height="29dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text=""
+        android:layout_marginTop="8dp"
+        android:text="50000"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_baselineTwoOverTitle"
@@ -260,7 +284,7 @@
         android:layout_width="245dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
-        android:text=""
+        android:text="100,000 ha under restoration"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_sdgTargetTwoVerify"
@@ -283,11 +307,9 @@
         android:id="@+id/cb_verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:text="Verified by Curator"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

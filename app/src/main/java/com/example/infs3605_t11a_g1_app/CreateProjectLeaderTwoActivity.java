@@ -53,27 +53,25 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
         ArrayAdapter<String> kpisAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, kpisTwo);
         kpiDropdownTwo.setAdapter(kpisAdapterTwo);
         Spinner targetDropDownOne = findViewById(R.id.sp_targetsOne);
-        String[] targetsOne = new String[]{"15.1: Ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems",
-                "15.2: Promote the implementation of sustainable management of all types of forests",
-                "15.3: Combat desertification, restore degraded land and soil",
-                "15.4: Ensure the conservation of mountain ecosystems, including their biodiversity",
-                "15.5: Take urgent and significant action to reduce the degradation of natural habitats",
-                "15.6: Promote fair and equitable sharing of the benefits arising from the utilization of genetic resources",
-                "15.7: Take urgent action to end poaching and trafficking of protected species of flora and fauna",
-                "15.8: Introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species",
-                "15.9: Integrate ecosystem and biodiversity values into national and local planning"};
+        String[] targetsOne = new String[]{"15.1: Ensure the conservation of ecosystems",
+                "15.2: Promote sustainable management",
+                "15.3: Combat restore degraded land",
+                "15.4: Ensure the conservation biodiversity",
+                "15.5: Take action to reduce the degradation of habitats",
+                "15.7: End poaching of protected species of flora and fauna",
+                "15.8: Prevent impact of invasive alien species",
+                "15.9: Integrate biodiversity values into national and local planning"};
         ArrayAdapter<String> targetsAdapterOne = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targetsOne);
         targetDropDownOne.setAdapter(targetsAdapterOne);
         Spinner targetDropDownTwo = findViewById(R.id.sp_targetsTwo);
-        String[] targetsTwo = new String[]{"15.1: Ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems",
-                "15.2: Promote the implementation of sustainable management of all types of forests",
-                "15.3: Combat desertification, restore degraded land and soil",
-                "15.4: Ensure the conservation of mountain ecosystems, including their biodiversity",
-                "15.5: Take urgent and significant action to reduce the degradation of natural habitats",
-                "15.6: Promote fair and equitable sharing of the benefits arising from the utilization of genetic resources",
-                "15.7: Take urgent action to end poaching and trafficking of protected species of flora and fauna",
-                "15.8: Introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species",
-                "15.9: Integrate ecosystem and biodiversity values into national and local planning"};
+        String[] targetsTwo = new String[]{"15.1: Ensure the conservation of ecosystems",
+                "15.2: Promote sustainable management",
+                "15.3: Combat restore degraded land",
+                "15.4: Ensure the conservation biodiversity",
+                "15.5: Take action to reduce the degradation of habitats",
+                "15.7: End poaching of protected species of flora and fauna",
+                "15.8: Prevent impact of invasive alien species",
+                "15.9: Integrate biodiversity values into national and local planning"};;
         ArrayAdapter<String> targetsAdapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targetsTwo);
         targetDropDownTwo.setAdapter(targetsAdapterTwo);
 
@@ -115,6 +113,7 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 projectLeader.setImpactScore("0");
                 projectLeader.setBaselineAchieve("N/A");
                 projectLeader.setCheckbox(false);
+                projectLeader.setLink(null);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override

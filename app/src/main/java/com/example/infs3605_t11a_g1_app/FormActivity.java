@@ -34,14 +34,9 @@ import java.util.Map;
 
 public class FormActivity extends AppCompatActivity {
     TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo, mBaselineKpiOne, mBaselineKpiTwo;
-    EditText mCurrentKpiOne, mCurrentKpiTwo;
+    EditText mCurrentKpiOne, mCurrentKpiTwo, mLink;
     Button mSubmit;
-    private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private final DatabaseReference databaseReferenceOne = FirebaseDatabase.getInstance().getReference("ProjectLeader");
-    private final DatabaseReference databaseReferenceTwo = FirebaseDatabase.getInstance().getReference("ProjectLeader");
-
-    ImageView upload;
-    Uri imageuri;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +44,7 @@ public class FormActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_form);
         getSupportActionBar().hide();
+
 
         mTargetSdgOne = findViewById(R.id.tv_sdgTargetOneForm);
         mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwoForm);
@@ -58,23 +54,25 @@ public class FormActivity extends AppCompatActivity {
         mBaselineKpiTwo = findViewById(R.id.tv_baseKpiTwoForm);
         mCurrentKpiOne = findViewById(R.id.et_currentKpiOneForm);
         mCurrentKpiTwo = findViewById(R.id.et_currentKpiTwoForm);
-        upload = findViewById(R.id.uploadpdf);
+        mLink = findViewById(R.id.et_link);
 
-        mSubmit = (Button) findViewById(R.id.btn_formSubmit);
+        mSubmit = findViewById(R.id.btn_formSubmit);
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String currentOne = mCurrentKpiOne.getText().toString();
                 String currentTwo = mCurrentKpiTwo.getText().toString();
+                String link = mLink.getText().toString();
 
-                if (TextUtils.isEmpty(currentOne) || TextUtils.isEmpty(currentTwo)) {
+                if (TextUtils.isEmpty(currentOne) || TextUtils.isEmpty(currentTwo) || TextUtils.isEmpty(link)) {
                     Toast.makeText(FormActivity.this, "Please enter all fields and upload evidence.", Toast.LENGTH_SHORT).show();
                 } else {
-                    submitUpdate(currentOne, currentTwo);
+                    submitUpdate(currentOne, currentTwo, link);
                 }
             }
 
-            private void submitUpdate(String currentOne, String currentTwo) {
+            DatabaseReference databaseReferenceOne = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            private void submitUpdate(String currentOne, String currentTwo, String link) {
                 databaseReferenceOne.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -116,7 +114,7 @@ public class FormActivity extends AppCompatActivity {
                             Toast.makeText(FormActivity.this, "Invalid submission", Toast.LENGTH_SHORT).show();
                         }
 
-                        float impactScoreFloat = (float) ((((Float.valueOf(currentOne) / kpiOne) * 0.5) + ((Float.valueOf(currentTwo) / kpiTwo) * 0.5)) * 100);
+                        float impactScoreFloat = (float) (((Float.valueOf(currentOne) / kpiOne * 0.5) + (Float.valueOf(currentTwo) / kpiTwo) * 0.5) * 100);
                         double impactScoreDouble = Double.valueOf(String.valueOf(impactScoreFloat));
                         String impactScore = Double.toString(impactScoreDouble);
 
@@ -127,7 +125,7 @@ public class FormActivity extends AppCompatActivity {
                         float baseComparisonTwo = (Float.valueOf(currentTwo) / Float.valueOf(baseTwo));
 
                         String baselineAchieve = null;
-                        if (baseComparisonOne == 1 && baseComparisonTwo == 1) {
+                        if (baseComparisonOne >= 1 && baseComparisonTwo >= 1) {
                             baselineAchieve = "Baseline Achieved";
                         } else {
                             baselineAchieve = "Baseline Not Reached";
@@ -136,9 +134,10 @@ public class FormActivity extends AppCompatActivity {
                         Map<String, Object> updates = new HashMap<>();
                         updates.put("currentOne", currentOne);
                         updates.put("currentTwo", currentTwo);
+                        updates.put("link", link);
                         updates.put("impactScore", impactScore);
                         updates.put("baselineAchieve", baselineAchieve);
-                        databaseReferenceOne.child(mAuth.getCurrentUser().getUid()).updateChildren(updates);
+                        databaseReferenceOne.updateChildren(updates);
                         startActivity(new Intent(FormActivity.this, OverviewActivity.class));
                     }
 
@@ -150,25 +149,24 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
+        DatabaseReference databaseReferenceTwo = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         databaseReferenceTwo.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot ds : snapshot.getChildren()) {
-                    String targetOne = ds.child("targetOne").getValue(String.class);
-                    String targetTwo = ds.child("targetTwo").getValue(String.class);
-                    String kpiOne = ds.child("kpiOne").getValue(String.class);
-                    String kpiTwo = ds.child("kpiTwo").getValue(String.class);
-                    String kpiOneSpin = ds.child("kpiOneSpin").getValue(String.class);
-                    String kpiTwoSpin = ds.child("kpiTwoSpin").getValue(String.class);
+                    String targetOne = snapshot.child("targetOne").getValue(String.class);
+                    String targetTwo = snapshot.child("targetTwo").getValue(String.class);
+                    String kpiOne = snapshot.child("kpiOne").getValue(String.class);
+                    String kpiTwo = snapshot.child("kpiTwo").getValue(String.class);
+                    String kpiOneSpin = snapshot.child("kpiOneSpin").getValue(String.class);
+                    String kpiTwoSpin = snapshot.child("kpiTwoSpin").getValue(String.class);
 
                     mTargetSdgOne.setText(targetOne);
-                    mTargetSdgOne.setText(targetTwo);
+                    mTargetSdgTwo.setText(targetTwo);
                     mBaselineKpiOne.setText(kpiOne);
                     mBaselineKpiTwo.setText(kpiTwo);
                     mTargetKpiOne.setText(kpiOneSpin);
                     mTargetKpiTwo.setText(kpiTwoSpin);
                 }
-            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -176,58 +174,59 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent galleryIntent = new Intent();
-                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+//        upload.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent galleryIntent = new Intent();
+//                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+//
+//                galleryIntent.setType("application/pdf");
+//                startActivityForResult(galleryIntent, 1);
+//            }
+//        });
+//    }
 
-                galleryIntent.setType("application/pdf");
-                startActivityForResult(galleryIntent, 1);
-            }
-        });
-    }
+//    ProgressDialog dialog;
 
-    ProgressDialog dialog;
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            dialog = new ProgressDialog(this);
-            dialog.setMessage("Uploading");
-            dialog.show();
-            imageuri = data.getData();
-            final String timestamp = "" + System.currentTimeMillis();
-            StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-            final String messagePushID = timestamp;
-            Toast.makeText(FormActivity.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
-
-            final StorageReference filepath = storageReference.child(messagePushID + "." + "pdf");
-            Toast.makeText(FormActivity.this, filepath.getName(), Toast.LENGTH_SHORT).show();
-            filepath.putFile(imageuri).continueWithTask(new Continuation() {
-                @Override
-                public Object then(@NonNull Task task) throws Exception {
-                    if (!task.isSuccessful()) {
-                        throw task.getException();
-                    }
-                    return filepath.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                @Override
-                public void onComplete(@NonNull Task<Uri> task) {
-                    if (task.isSuccessful()) {
-                        dialog.dismiss();
-                        Uri uri = task.getResult();
-                        String myurl;
-                        myurl = uri.toString();
-                        Toast.makeText(FormActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
-                    } else {
-                        dialog.dismiss();
-                        Toast.makeText(FormActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (resultCode == RESULT_OK) {
+//            dialog = new ProgressDialog(this);
+//            dialog.setMessage("Uploading");
+//            dialog.show();
+//            imageuri = data.getData();
+//            final String timestamp = "" + System.currentTimeMillis();
+//            StorageReference storageReference = FirebaseStorage.getInstance().getReference();
+//            final String messagePushID = timestamp;
+//            Toast.makeText(FormActivity.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
+//
+//            final StorageReference filepath = storageReference.child(messagePushID + "." + "pdf");
+//            Toast.makeText(FormActivity.this, filepath.getName(), Toast.LENGTH_SHORT).show();
+//            filepath.putFile(imageuri).continueWithTask(new Continuation() {
+//                @Override
+//                public Object then(@NonNull Task task) throws Exception {
+//                    if (!task.isSuccessful()) {
+//                        throw task.getException();
+//                    }
+//                    return filepath.getDownloadUrl();
+//                }
+//            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Uri> task) {
+//                    if (task.isSuccessful()) {
+//                        dialog.dismiss();
+//                        Uri uri = task.getResult();
+//                        String myurl;
+//                        myurl = uri.toString();
+//                        Toast.makeText(FormActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+//                    } else {
+//                        dialog.dismiss();
+//                        Toast.makeText(FormActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+//        }
+//    }
     }
 }
