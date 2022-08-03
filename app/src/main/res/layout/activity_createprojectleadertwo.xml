@@ -35,8 +35,8 @@
         android:id="@+id/sp_kpisTwo"
         android:layout_width="371dp"
         android:layout_height="31dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_baselinesec"
-        app:layout_constraintTop_toBottomOf="@+id/tv_baselinesec" />
+        app:layout_constraintStart_toStartOf="@+id/tv_baselinesTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_baselinesTwo" />
 
     <EditText
         android:id="@+id/et_baselinekpiTwo"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineone2" />
 
     <TextView
-        android:id="@+id/tv_baselinesec"
+        android:id="@+id/tv_baselinesTwo"
         android:layout_width="383dp"
         android:layout_height="26dp"
         android:layout_marginTop="28dp"
