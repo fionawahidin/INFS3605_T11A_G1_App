@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_targetKpiTwoVerify2"
+        android:id="@+id/tv_linkVerify"
         android:layout_width="245dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"

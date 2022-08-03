@@ -68,6 +68,7 @@ public class CuratorSelectActivity extends AppCompatActivity {
                 curator.setCuratorName(curatorName);
                 curator.setCuratorChallenge(curatorChallenge);
                 curator.setReason(curatorReason);
+                curator.setVerify(false);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_currentKpiOne"
+        android:id="@+id/tv_currentKpiTwo"
         android:layout_width="107dp"
         android:layout_height="29dp"
         android:layout_marginTop="12dp"
@@ -34,8 +34,8 @@
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_currentKpiOne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_currentKpiOne" />
+        app:layout_constraintStart_toStartOf="@+id/tv_currentKpiTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currentKpiTwo" />
 
     <TextView
         android:id="@+id/tv_kpiTwoOverview3"
@@ -231,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_baselineTwoOverTitle" />
 
     <TextView
-        android:id="@+id/tv_currentKpiTwo"
+        android:id="@+id/tv_currentKpiOne"
         android:layout_width="106dp"
         android:layout_height="28dp"
         android:layout_marginStart="8dp"

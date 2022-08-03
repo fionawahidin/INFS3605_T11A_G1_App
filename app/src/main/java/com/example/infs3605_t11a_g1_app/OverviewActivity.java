@@ -36,8 +36,8 @@ public class OverviewActivity extends AppCompatActivity {
         mTargetKpiTwo = findViewById(R.id.tv_targetKpiTwo);
         mBaselineKpiOne = findViewById(R.id.tv_baseKpiOne);
         mBaselineKpiTwo = findViewById(R.id.tv_baseKpiTwo);
-        mCurrentKpiOne = findViewById(R.id.tv_currentKpiOne);
-        mCurrentKpiTwo = findViewById(R.id.tv_currentKpiTwo);
+        mCurrentKpiOne = findViewById(R.id.tv_currentKpiTwo);
+        mCurrentKpiTwo = findViewById(R.id.tv_currentKpiOne);
         mImpactScore = findViewById(R.id.tv_impact);
         mBaseAchieve = findViewById(R.id.tv_baseAchieve);
         mCheckbox = findViewById(R.id.cb_verificationOver);
@@ -87,7 +87,6 @@ public class OverviewActivity extends AppCompatActivity {
                     mCurrentKpiTwo.setText(currentTwo);
                     mImpactScore.setText(impactScore);
                     mBaseAchieve.setText(baselineAchieve);
-                    mCheckbox.setChecked(true);
                     mLink.setText(link);
                 }
 

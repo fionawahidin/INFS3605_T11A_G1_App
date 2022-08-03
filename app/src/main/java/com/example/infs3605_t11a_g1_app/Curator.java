@@ -2,18 +2,19 @@ package com.example.infs3605_t11a_g1_app;
 
 public class Curator extends User {
 
-    public Curator(String curatorName, String curatorChallenge, String reason) {
+    public Curator(String curatorName, String curatorChallenge, String reason, boolean verify) {
         this.curatorName = curatorName;
         this.curatorChallenge = curatorChallenge;
         this.reason = reason;
+        this.verify = verify;
     }
 
     String curatorName;
     String curatorChallenge;
     String reason;
+    boolean verify;
 
     public Curator() {
-
     }
 
     public String getCuratorName() {
@@ -38,5 +39,13 @@ public class Curator extends User {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public boolean isVerify() {
+        return verify;
+    }
+
+    public void setVerify(boolean verify) {
+        this.verify = verify;
     }
 }
