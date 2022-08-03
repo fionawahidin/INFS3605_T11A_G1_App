@@ -1,7 +1,5 @@
 package com.example.infs3605_t11a_g1_app;
 
-import android.net.Uri;
-
 public class ProjectLeader extends User {
     private String name;
     private String solutionName;
@@ -15,16 +13,14 @@ public class ProjectLeader extends User {
     private String targetTwo;
     private String currentOne;
     private String currentTwo;
-    private Uri imageuri;
     private String impactScore;
     private String baselineAchieve;
-    private boolean checkbox;
     private String link;
 
     public ProjectLeader(String name, String solutionName, String challengeSpin, String desc,
                          String kpiOneSpin, String kpiOne, String kpiTwoSpin, String kpiTwo,
                          String targetOne, String targetTwo, String currentOne, String currentTwo,
-                         Uri imageuri, String impactScore, String baselineAchieve, boolean checkbox, String link) {
+                         String impactScore, String baselineAchieve, String link) {
         this.name = name;
         this.solutionName = solutionName;
         this.challengeSpin = challengeSpin;
@@ -37,10 +33,8 @@ public class ProjectLeader extends User {
         this.targetTwo = targetTwo;
         this.currentOne = currentOne;
         this.currentTwo = currentTwo;
-        this.imageuri = imageuri;
         this.impactScore = impactScore;
         this.baselineAchieve = baselineAchieve;
-        this.checkbox = checkbox;
         this.link = link;
     }
 
@@ -143,14 +137,6 @@ public class ProjectLeader extends User {
         this.currentTwo = currentTwo;
     }
 
-    public Uri getImageuri() {
-        return imageuri;
-    }
-
-    public void setImageuri(Uri imageuri) {
-        this.imageuri = imageuri;
-    }
-
     public String getImpactScore() {
         return impactScore;
     }
@@ -165,14 +151,6 @@ public class ProjectLeader extends User {
 
     public void setBaselineAchieve(String baselineAchieve) {
         this.baselineAchieve = baselineAchieve;
-    }
-
-    public boolean isCheckbox() {
-        return checkbox;
-    }
-
-    public void setCheckbox(boolean checkbox) {
-        this.checkbox = checkbox;
     }
 
     public String getLink() {

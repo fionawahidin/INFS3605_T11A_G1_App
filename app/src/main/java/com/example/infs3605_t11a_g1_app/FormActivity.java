@@ -1,14 +1,11 @@
 package com.example.infs3605_t11a_g1_app;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,27 +13,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.Continuation;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class FormActivity extends AppCompatActivity {
     TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo, mBaselineKpiOne, mBaselineKpiTwo;
     EditText mCurrentKpiOne, mCurrentKpiTwo, mLink;
     Button mSubmit;
-    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,7 +60,7 @@ public class FormActivity extends AppCompatActivity {
                 }
             }
 
-            DatabaseReference databaseReferenceOne = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            final DatabaseReference databaseReferenceOne = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
             private void submitUpdate(String currentOne, String currentTwo, String link) {
                 databaseReferenceOne.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -112,17 +103,17 @@ public class FormActivity extends AppCompatActivity {
                             Toast.makeText(FormActivity.this, "Invalid submission", Toast.LENGTH_SHORT).show();
                         }
 
-                        float impactScoreFloat = (float) (((Float.valueOf(currentOne) / kpiOne * 0.5) + (Float.valueOf(currentTwo) / kpiTwo) * 0.5) * 100);
-                        double impactScoreDouble = Double.valueOf(String.valueOf(impactScoreFloat));
+                        float impactScoreFloat = (float) (((Float.parseFloat(currentOne) / kpiOne * 0.5) + (Float.parseFloat(currentTwo) / kpiTwo) * 0.5) * 100);
+                        double impactScoreDouble = Double.parseDouble(String.valueOf(impactScoreFloat));
                         String impactScore = Double.toString(impactScoreDouble);
 
                         String baseOne = mBaselineKpiOne.getText().toString();
                         String baseTwo = mBaselineKpiTwo.getText().toString();
 
-                        float baseComparisonOne = (Float.valueOf(currentOne) / Float.valueOf(baseOne));
-                        float baseComparisonTwo = (Float.valueOf(currentTwo) / Float.valueOf(baseTwo));
+                        float baseComparisonOne = (Float.parseFloat(currentOne) / Float.parseFloat(baseOne));
+                        float baseComparisonTwo = (Float.parseFloat(currentTwo) / Float.parseFloat(baseTwo));
 
-                        String baselineAchieve = null;
+                        String baselineAchieve;
                         if (baseComparisonOne >= 1 && baseComparisonTwo >= 1) {
                             baselineAchieve = "Baseline Achieved";
                         } else {
@@ -147,7 +138,7 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
-        DatabaseReference databaseReferenceTwo = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        DatabaseReference databaseReferenceTwo = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
         databaseReferenceTwo.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -171,60 +162,5 @@ public class FormActivity extends AppCompatActivity {
                 Toast.makeText(FormActivity.this, "Failed to Load" + error, Toast.LENGTH_SHORT).show();
             }
         });
-
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent galleryIntent = new Intent();
-//                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-//
-//                galleryIntent.setType("application/pdf");
-//                startActivityForResult(galleryIntent, 1);
-//            }
-//        });
-//    }
-
-//    ProgressDialog dialog;
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (resultCode == RESULT_OK) {
-//            dialog = new ProgressDialog(this);
-//            dialog.setMessage("Uploading");
-//            dialog.show();
-//            imageuri = data.getData();
-//            final String timestamp = "" + System.currentTimeMillis();
-//            StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-//            final String messagePushID = timestamp;
-//            Toast.makeText(FormActivity.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
-//
-//            final StorageReference filepath = storageReference.child(messagePushID + "." + "pdf");
-//            Toast.makeText(FormActivity.this, filepath.getName(), Toast.LENGTH_SHORT).show();
-//            filepath.putFile(imageuri).continueWithTask(new Continuation() {
-//                @Override
-//                public Object then(@NonNull Task task) throws Exception {
-//                    if (!task.isSuccessful()) {
-//                        throw task.getException();
-//                    }
-//                    return filepath.getDownloadUrl();
-//                }
-//            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-//                @Override
-//                public void onComplete(@NonNull Task<Uri> task) {
-//                    if (task.isSuccessful()) {
-//                        dialog.dismiss();
-//                        Uri uri = task.getResult();
-//                        String myurl;
-//                        myurl = uri.toString();
-//                        Toast.makeText(FormActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        dialog.dismiss();
-//                        Toast.makeText(FormActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            });
-//        }
-//    }
     }
 }

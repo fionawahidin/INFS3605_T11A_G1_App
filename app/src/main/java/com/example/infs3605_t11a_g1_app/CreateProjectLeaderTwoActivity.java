@@ -1,6 +1,5 @@
 package com.example.infs3605_t11a_g1_app;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -112,7 +111,6 @@ public class CreateProjectLeaderTwoActivity extends AppCompatActivity {
                 projectLeader.setCurrentTwo("0");
                 projectLeader.setImpactScore("0");
                 projectLeader.setBaselineAchieve("N/A");
-                projectLeader.setCheckbox(false);
                 projectLeader.setLink(null);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {

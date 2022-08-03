@@ -1,6 +1,10 @@
 package com.example.infs3605_t11a_g1_app;
 
 public class Curator extends User {
+    String curatorName;
+    String curatorChallenge;
+    String reason;
+    boolean verify;
 
     public Curator(String curatorName, String curatorChallenge, String reason, boolean verify) {
         this.curatorName = curatorName;
@@ -8,11 +12,6 @@ public class Curator extends User {
         this.reason = reason;
         this.verify = verify;
     }
-
-    String curatorName;
-    String curatorChallenge;
-    String reason;
-    boolean verify;
 
     public Curator() {
     }

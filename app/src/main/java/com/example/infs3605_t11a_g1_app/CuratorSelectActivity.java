@@ -20,13 +20,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class CuratorSelectActivity extends AppCompatActivity {
     EditText mCuratorName, mReason;
     Spinner mCuratorChallenges;
     Button mCuratorSubmit;
     Curator curator;
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Curator");
+    final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Curator");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class CuratorSelectActivity extends AppCompatActivity {
         mReason = findViewById(R.id.et_curatorReason);
 
         mCuratorChallenges = findViewById(R.id.sp_curatorChallenges);
-        Spinner curatorDropdown = findViewById(R.id.sp_curatorChallenges);
+        Spinner curatorDropdown = mCuratorChallenges;
         String[] curatorChallenges = new String[]{"The Great Fashion Decarbonisation", "Innovate to Regenerate", "Cities of Tomorrow", "Bushfire Regeneration Challenge"};
         ArrayAdapter<String> curatorAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, curatorChallenges);
         curatorDropdown.setAdapter(curatorAdapter);
@@ -59,11 +61,6 @@ public class CuratorSelectActivity extends AppCompatActivity {
                 }
             }
 
-//        } else {
-//            addToData(targetOne, kpiOne, baselineOne, targetTwo, kpiTwo, baselineTwo);
-//        }
-//    }
-
             private void addCurator(String curatorName, String curatorChallenge, String curatorReason) {
                 curator.setCuratorName(curatorName);
                 curator.setCuratorChallenge(curatorChallenge);
@@ -73,7 +70,7 @@ public class CuratorSelectActivity extends AppCompatActivity {
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        databaseReference.child(mAuth.getCurrentUser().getUid()).setValue(curator);
+                        databaseReference.child(Objects.requireNonNull(mAuth.getCurrentUser()).getUid()).setValue(curator);
                         startActivity(new Intent(CuratorSelectActivity.this, CuratorVerificationActivity.class));
                     }
 

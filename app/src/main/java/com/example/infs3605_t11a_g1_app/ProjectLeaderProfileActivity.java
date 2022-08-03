@@ -13,6 +13,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class ProjectLeaderProfileActivity extends AppCompatActivity {
     TextView mName, mDesc, mSolutionName, mCurrentLevel, mNextLevel, mCompleteLevel;
 
@@ -28,7 +30,7 @@ public class ProjectLeaderProfileActivity extends AppCompatActivity {
         mCompleteLevel = findViewById(R.id.tv_completeLevel);
         mNextLevel = findViewById(R.id.tv_nextLevel);
 
-        DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("ProjectLeader").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
         userDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

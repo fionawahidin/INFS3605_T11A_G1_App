@@ -17,26 +17,21 @@ public class CreateProjectLeaderActivity extends AppCompatActivity {
     private Spinner mChallengeSpinner;
     private Button mNext;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createprojectleader);
-
-//        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
 
         mName = findViewById(R.id.et_name);
         mSolutionName = findViewById(R.id.et_solution);
         mDesc = findViewById(R.id.et_desc);
 
         mChallengeSpinner = findViewById(R.id.sp_challenges);
-
-        Spinner challengeDropdown = findViewById(R.id.sp_challenges);
+        Spinner challengeDropdown = mChallengeSpinner;
         String[] challenges = new String[]{"The Great Fashion Decarbonisation", "Innovate to Regenerate", "Cities of Tomorrow", "Bushfire Regeneration Challenge"};
         ArrayAdapter<String> challengesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, challenges);
         challengeDropdown.setAdapter(challengesAdapter);
 
-//        DatabaseReference databaseReference = mDatabase.getReference("CURATORS");
         mNext = findViewById(R.id.bts_next);
         mNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

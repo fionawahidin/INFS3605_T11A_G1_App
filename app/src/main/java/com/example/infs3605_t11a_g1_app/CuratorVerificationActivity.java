@@ -1,13 +1,9 @@
 package com.example.infs3605_t11a_g1_app;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import android.text.TextUtils;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,38 +18,23 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CuratorVerificationActivity extends AppCompatActivity {
-    private TextView mTargetSdgOne, mTargetSdgTwo, mTargetKpiOne, mTargetKpiTwo,
-            mBaselineKpiOne, mBaselineKpiTwo, mCurrentKpiOne, mCurrentKpiTwo,
-            mImpactScore, mBaseAchieve, mLink;
-    private CheckBox mCheckbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_curatorverification);
 
-        mTargetSdgOne = findViewById(R.id.tv_sdgTargetOneVerify);
-        mTargetSdgTwo = findViewById(R.id.tv_sdgTargetTwoVerify);
-        mTargetKpiOne = findViewById(R.id.tv_targetKpiOneVerify);
-        mTargetKpiTwo = findViewById(R.id.tv_targetKpiTwoVerify);
-        mBaselineKpiOne = findViewById(R.id.tv_baseKpiOneVerify);
-        mBaselineKpiTwo = findViewById(R.id.tv_baseKpiTwoVerify);
-        mCurrentKpiOne = findViewById(R.id.tv_currentKpiOneVerify);
-        mCurrentKpiTwo = findViewById(R.id.tv_currentKpiTwoVerify);
-        mImpactScore = findViewById(R.id.tv_impactVerify);
-        mBaseAchieve = findViewById(R.id.tv_baseAchieveVerify);
-        mLink = findViewById(R.id.tv_linkVerify);
-
-        mCheckbox = findViewById(R.id.cb_verification);
+        CheckBox mCheckbox = findViewById(R.id.cb_verification);
         mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean check) {
                 submitVerify(check);
             }
 
-            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Curator").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Curator").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
             private void submitVerify(boolean check) {
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override

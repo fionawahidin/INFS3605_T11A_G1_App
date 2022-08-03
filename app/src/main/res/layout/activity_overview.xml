@@ -16,15 +16,6 @@
         app:layout_constraintStart_toStartOf="@+id/tv_baseKpiTwo"
         app:layout_constraintTop_toBottomOf="@+id/tv_baseKpiTwo" />
 
-    <CheckBox
-        android:id="@+id/cb_verificationOver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:text="Verified by Curator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/tv_linkForm"
         android:layout_width="269dp"
@@ -119,7 +110,7 @@
         android:text="Update Project"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -328,9 +319,8 @@
         android:id="@+id/btn_profile"
         android:layout_width="83dp"
         android:layout_height="45dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="STATS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
